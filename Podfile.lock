@@ -1,0 +1,52 @@
+PODS:
+  - Alamofire (5.4.1)
+  - GoogleMaps (3.7.0):
+    - GoogleMaps/Maps (= 3.7.0)
+  - GoogleMaps/Base (3.7.0)
+  - GoogleMaps/Maps (3.7.0):
+    - GoogleMaps/Base
+  - GooglePlaces (3.7.0):
+    - GoogleMaps/Base (= 3.7.0)
+  - iOSDropDown (0.3.4)
+  - IQKeyboardManagerSwift (6.5.6)
+  - JTMaterialSpinner (3.0.5)
+  - SDWebImage (5.10.2):
+    - SDWebImage/Core (= 5.10.2)
+  - SDWebImage/Core (5.10.2)
+  - Toast-Swift (5.0.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - GoogleMaps (~> 3.7.0)
+  - GooglePlaces
+  - GooglePlaces (~> 3.7.0)
+  - iOSDropDown
+  - IQKeyboardManagerSwift
+  - JTMaterialSpinner
+  - SDWebImage
+  - Toast-Swift
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - GoogleMaps
+    - GooglePlaces
+    - iOSDropDown
+    - IQKeyboardManagerSwift
+    - JTMaterialSpinner
+    - SDWebImage
+    - Toast-Swift
+
+SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  GoogleMaps: 55da829c68aa931f3ae982b9e341cc2f3d89c587
+  GooglePlaces: a62077320f9d64239245af63aa1aa136393ebeb6
+  iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  JTMaterialSpinner: 28a0444186b6b2df4206a77d12f7c9dcbe604958
+  SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+
+PODFILE CHECKSUM: 172b77b6513b8b4a07648fd5f0fca8d42bb30a69
+
+COCOAPODS: 1.10.1

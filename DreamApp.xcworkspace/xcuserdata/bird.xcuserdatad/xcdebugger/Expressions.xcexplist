@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "HomeVC.collectionView(_:layout:sizeForItemAt:):HomeVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "collectionView.bounds.height">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "HomeVC.viewDidLoad():HomeVC.swift">
+      </ContextState>
+      <ContextState
+         contextName = "HomeVC.collectionView(_:cellForItemAt:):HomeVC.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
