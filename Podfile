@@ -16,4 +16,5 @@ target 'DreamApp' do
   pod 'iOSDropDown'
   pod 'SDWebImage'
   pod 'Toast-Swift'
+  pod 'Cosmos'
 end

@@ -8,15 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		6089483514C8B49402A6A325 /* Pods_DreamApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F984E4B59FD3ACEB65F59FE6 /* Pods_DreamApp.framework */; };
+		C504515B25F7A9A500FACD2E /* JobCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C504515925F7A9A500FACD2E /* JobCategoryCell.swift */; };
+		C504515C25F7A9A500FACD2E /* JobCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C504515A25F7A9A500FACD2E /* JobCategoryCell.xib */; };
+		C504516125F7BBFB00FACD2E /* SubCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C504516025F7BBFB00FACD2E /* SubCategoryVC.swift */; };
+		C504516525F7C39B00FACD2E /* ServicerListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C504516325F7C39B00FACD2E /* ServicerListCell.swift */; };
+		C504516625F7C39B00FACD2E /* ServicerListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C504516425F7C39B00FACD2E /* ServicerListCell.xib */; };
+		C504517425F7D24200FACD2E /* ServicerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C504517325F7D24200FACD2E /* ServicerListVC.swift */; };
+		C504517725F7D84C00FACD2E /* ServicerMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C504517625F7D84C00FACD2E /* ServicerMapVC.swift */; };
 		C54A6A9D25AB856E00C34D10 /* PersonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A6A9C25AB856E00C34D10 /* PersonVC.swift */; };
-		C567A60125AA1E3B00F9E97E /* HouseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C567A5FF25AA1E3B00F9E97E /* HouseCell.swift */; };
 		C5BAE44A25EE8F4F0064E65A /* LoginHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BAE44925EE8F4F0064E65A /* LoginHomeVC.swift */; };
 		C5BAE44D25EE8F8B0064E65A /* LoginPhoneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BAE44C25EE8F8B0064E65A /* LoginPhoneVC.swift */; };
 		C5BAE45025EE8F9B0064E65A /* LoginEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BAE44F25EE8F9B0064E65A /* LoginEmailVC.swift */; };
 		C5BAE45325EE90330064E65A /* ForgotPassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BAE45225EE90330064E65A /* ForgotPassVC.swift */; };
 		C5BAE45625EE90470064E65A /* ForgotPassResendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BAE45525EE90470064E65A /* ForgotPassResendVC.swift */; };
-		C5BAE45925EE915A0064E65A /* SearchHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BAE45825EE915A0064E65A /* SearchHomeVC.swift */; };
-		C5BAE45C25EE91820064E65A /* FilterHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BAE45B25EE91820064E65A /* FilterHomeVC.swift */; };
 		C5BAE45F25EE92AF0064E65A /* SignupHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BAE45E25EE92AF0064E65A /* SignupHomeVC.swift */; };
 		C5BAE46225EE92BF0064E65A /* SignupEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BAE46125EE92BF0064E65A /* SignupEmailVC.swift */; };
 		C5BAE46525EE92CF0064E65A /* SignupPhoneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BAE46425EE92CF0064E65A /* SignupPhoneVC.swift */; };
@@ -34,15 +38,19 @@
 /* Begin PBXFileReference section */
 		3DA934695D712947D6EE7BA7 /* Pods-DreamApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamApp.debug.xcconfig"; path = "Target Support Files/Pods-DreamApp/Pods-DreamApp.debug.xcconfig"; sourceTree = "<group>"; };
 		6DA4A7BBE66E6104BEE84ECF /* Pods-DreamApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamApp.release.xcconfig"; path = "Target Support Files/Pods-DreamApp/Pods-DreamApp.release.xcconfig"; sourceTree = "<group>"; };
+		C504515925F7A9A500FACD2E /* JobCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCategoryCell.swift; sourceTree = "<group>"; };
+		C504515A25F7A9A500FACD2E /* JobCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobCategoryCell.xib; sourceTree = "<group>"; };
+		C504516025F7BBFB00FACD2E /* SubCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoryVC.swift; sourceTree = "<group>"; };
+		C504516325F7C39B00FACD2E /* ServicerListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicerListCell.swift; sourceTree = "<group>"; };
+		C504516425F7C39B00FACD2E /* ServicerListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicerListCell.xib; sourceTree = "<group>"; };
+		C504517325F7D24200FACD2E /* ServicerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicerListVC.swift; sourceTree = "<group>"; };
+		C504517625F7D84C00FACD2E /* ServicerMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicerMapVC.swift; sourceTree = "<group>"; };
 		C54A6A9C25AB856E00C34D10 /* PersonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonVC.swift; sourceTree = "<group>"; };
-		C567A5FF25AA1E3B00F9E97E /* HouseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseCell.swift; sourceTree = "<group>"; };
 		C5BAE44925EE8F4F0064E65A /* LoginHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHomeVC.swift; sourceTree = "<group>"; };
 		C5BAE44C25EE8F8B0064E65A /* LoginPhoneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPhoneVC.swift; sourceTree = "<group>"; };
 		C5BAE44F25EE8F9B0064E65A /* LoginEmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmailVC.swift; sourceTree = "<group>"; };
 		C5BAE45225EE90330064E65A /* ForgotPassVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassVC.swift; sourceTree = "<group>"; };
 		C5BAE45525EE90470064E65A /* ForgotPassResendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassResendVC.swift; sourceTree = "<group>"; };
-		C5BAE45825EE915A0064E65A /* SearchHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHomeVC.swift; sourceTree = "<group>"; };
-		C5BAE45B25EE91820064E65A /* FilterHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHomeVC.swift; sourceTree = "<group>"; };
 		C5BAE45E25EE92AF0064E65A /* SignupHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupHomeVC.swift; sourceTree = "<group>"; };
 		C5BAE46125EE92BF0064E65A /* SignupEmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupEmailVC.swift; sourceTree = "<group>"; };
 		C5BAE46425EE92CF0064E65A /* SignupPhoneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPhoneVC.swift; sourceTree = "<group>"; };
@@ -118,9 +126,10 @@
 			isa = PBXGroup;
 			children = (
 				C5E0DA2725A8AF79008B0BFC /* HomeVC.swift */,
+				C504516025F7BBFB00FACD2E /* SubCategoryVC.swift */,
 				C54A6A9C25AB856E00C34D10 /* PersonVC.swift */,
-				C5BAE45825EE915A0064E65A /* SearchHomeVC.swift */,
-				C5BAE45B25EE91820064E65A /* FilterHomeVC.swift */,
+				C504517325F7D24200FACD2E /* ServicerListVC.swift */,
+				C504517625F7D84C00FACD2E /* ServicerMapVC.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -128,7 +137,10 @@
 		C567A5EF25AA0CCA00F9E97E /* cell */ = {
 			isa = PBXGroup;
 			children = (
-				C567A5FF25AA1E3B00F9E97E /* HouseCell.swift */,
+				C504515925F7A9A500FACD2E /* JobCategoryCell.swift */,
+				C504515A25F7A9A500FACD2E /* JobCategoryCell.xib */,
+				C504516325F7C39B00FACD2E /* ServicerListCell.swift */,
+				C504516425F7C39B00FACD2E /* ServicerListCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -228,7 +240,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C504516625F7C39B00FACD2E /* ServicerListCell.xib in Resources */,
 				C5E0DA3025A8AF7A008B0BFC /* LaunchScreen.storyboard in Resources */,
+				C504515C25F7A9A500FACD2E /* JobCategoryCell.xib in Resources */,
 				C5E0DA2D25A8AF7A008B0BFC /* Assets.xcassets in Resources */,
 				C5E0DA2B25A8AF79008B0BFC /* Main.storyboard in Resources */,
 			);
@@ -303,13 +317,12 @@
 				C5BAE46E25EE93010064E65A /* SignupInfoVC.swift in Sources */,
 				C5E0DA2825A8AF79008B0BFC /* HomeVC.swift in Sources */,
 				C5E0DA2425A8AF79008B0BFC /* AppDelegate.swift in Sources */,
-				C567A60125AA1E3B00F9E97E /* HouseCell.swift in Sources */,
+				C504516125F7BBFB00FACD2E /* SubCategoryVC.swift in Sources */,
 				C5BAE46225EE92BF0064E65A /* SignupEmailVC.swift in Sources */,
-				C5BAE45925EE915A0064E65A /* SearchHomeVC.swift in Sources */,
 				C5BAE45625EE90470064E65A /* ForgotPassResendVC.swift in Sources */,
 				C5BAE46B25EE92F20064E65A /* SignupPhoneConfirmVC.swift in Sources */,
-				C5BAE45C25EE91820064E65A /* FilterHomeVC.swift in Sources */,
 				C5BAE44D25EE8F8B0064E65A /* LoginPhoneVC.swift in Sources */,
+				C504516525F7C39B00FACD2E /* ServicerListCell.swift in Sources */,
 				C5E0DA2625A8AF79008B0BFC /* SceneDelegate.swift in Sources */,
 				C5BAE45F25EE92AF0064E65A /* SignupHomeVC.swift in Sources */,
 				C5BAE46825EE92E20064E65A /* SignupEmailConfirmVC.swift in Sources */,
@@ -317,7 +330,10 @@
 				C5BAE45325EE90330064E65A /* ForgotPassVC.swift in Sources */,
 				C5BAE46525EE92CF0064E65A /* SignupPhoneVC.swift in Sources */,
 				C5BAE44A25EE8F4F0064E65A /* LoginHomeVC.swift in Sources */,
+				C504517725F7D84C00FACD2E /* ServicerMapVC.swift in Sources */,
 				C5BAE45025EE8F9B0064E65A /* LoginEmailVC.swift in Sources */,
+				C504515B25F7A9A500FACD2E /* JobCategoryCell.swift in Sources */,
+				C504517425F7D24200FACD2E /* ServicerListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

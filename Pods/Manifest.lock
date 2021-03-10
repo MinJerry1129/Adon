@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.4.1)
+  - Cosmos (23.0.0)
   - GoogleMaps (3.7.0):
     - GoogleMaps/Maps (= 3.7.0)
   - GoogleMaps/Base (3.7.0)
@@ -17,6 +18,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - Cosmos
   - GoogleMaps (~> 3.7.0)
   - GooglePlaces
   - GooglePlaces (~> 3.7.0)
@@ -29,6 +31,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Cosmos
     - GoogleMaps
     - GooglePlaces
     - iOSDropDown
@@ -39,6 +42,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
   GoogleMaps: 55da829c68aa931f3ae982b9e341cc2f3d89c587
   GooglePlaces: a62077320f9d64239245af63aa1aa136393ebeb6
   iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
@@ -47,6 +51,6 @@ SPEC CHECKSUMS:
   SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 172b77b6513b8b4a07648fd5f0fca8d42bb30a69
+PODFILE CHECKSUM: f50a24c683202018f75e26a3a02d95bba56663e3
 
 COCOAPODS: 1.10.1
