@@ -15,6 +15,9 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     var subcategoryVC : SubCategoryVC!
     var personVC : PersonVC!
     
+    var historyVC : HistoryVC!
+    var favoriteVC : FavoriteVC!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         JobListTable.delegate = self
@@ -48,6 +51,19 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }
+    
+    @IBAction func onHistoryBtn(_ sender: Any) {
+        self.historyVC = self.storyboard?.instantiateViewController(withIdentifier: "historyVC") as? HistoryVC
+        self.historyVC.modalPresentationStyle = .fullScreen
+        self.present(self.historyVC, animated: true, completion: nil)
+    }
+    
+    @IBAction func onFavoriteBtn(_ sender: Any) {
+        self.favoriteVC = self.storyboard?.instantiateViewController(withIdentifier: "favoriteVC") as? FavoriteVC
+        self.favoriteVC.modalPresentationStyle = .fullScreen
+        self.present(self.favoriteVC, animated: true, completion: nil)
+    }
+    
 }
 extension UIView {
    func roundCorners(corners: UIRectCorner, radius: CGFloat) {

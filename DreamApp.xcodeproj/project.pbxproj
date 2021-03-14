@@ -15,6 +15,14 @@
 		C504516625F7C39B00FACD2E /* ServicerListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C504516425F7C39B00FACD2E /* ServicerListCell.xib */; };
 		C504517425F7D24200FACD2E /* ServicerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C504517325F7D24200FACD2E /* ServicerListVC.swift */; };
 		C504517725F7D84C00FACD2E /* ServicerMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C504517625F7D84C00FACD2E /* ServicerMapVC.swift */; };
+		C527607625FE5933002F3989 /* ServicerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C527607525FE5933002F3989 /* ServicerVC.swift */; };
+		C527607A25FE59C3002F3989 /* ReviewListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C527607825FE59C3002F3989 /* ReviewListCell.swift */; };
+		C527607B25FE59C3002F3989 /* ReviewListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C527607925FE59C3002F3989 /* ReviewListCell.xib */; };
+		C527607F25FE65A4002F3989 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C527607E25FE65A4002F3989 /* HistoryVC.swift */; };
+		C527608325FE69EE002F3989 /* HistoryGoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C527608125FE69EE002F3989 /* HistoryGoListCell.swift */; };
+		C527608425FE69EE002F3989 /* HistoryGoListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C527608225FE69EE002F3989 /* HistoryGoListCell.xib */; };
+		C527608C25FE7B22002F3989 /* FavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C527608B25FE7B22002F3989 /* FavoriteVC.swift */; };
+		C527609025FE83ED002F3989 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C527608F25FE83ED002F3989 /* ChatVC.swift */; };
 		C54A6A9D25AB856E00C34D10 /* PersonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A6A9C25AB856E00C34D10 /* PersonVC.swift */; };
 		C5BAE44A25EE8F4F0064E65A /* LoginHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BAE44925EE8F4F0064E65A /* LoginHomeVC.swift */; };
 		C5BAE44D25EE8F8B0064E65A /* LoginPhoneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BAE44C25EE8F8B0064E65A /* LoginPhoneVC.swift */; };
@@ -45,6 +53,14 @@
 		C504516425F7C39B00FACD2E /* ServicerListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicerListCell.xib; sourceTree = "<group>"; };
 		C504517325F7D24200FACD2E /* ServicerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicerListVC.swift; sourceTree = "<group>"; };
 		C504517625F7D84C00FACD2E /* ServicerMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicerMapVC.swift; sourceTree = "<group>"; };
+		C527607525FE5933002F3989 /* ServicerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicerVC.swift; sourceTree = "<group>"; };
+		C527607825FE59C3002F3989 /* ReviewListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListCell.swift; sourceTree = "<group>"; };
+		C527607925FE59C3002F3989 /* ReviewListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewListCell.xib; sourceTree = "<group>"; };
+		C527607E25FE65A4002F3989 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
+		C527608125FE69EE002F3989 /* HistoryGoListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryGoListCell.swift; sourceTree = "<group>"; };
+		C527608225FE69EE002F3989 /* HistoryGoListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryGoListCell.xib; sourceTree = "<group>"; };
+		C527608B25FE7B22002F3989 /* FavoriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVC.swift; sourceTree = "<group>"; };
+		C527608F25FE83ED002F3989 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		C54A6A9C25AB856E00C34D10 /* PersonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonVC.swift; sourceTree = "<group>"; };
 		C5BAE44925EE8F4F0064E65A /* LoginHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHomeVC.swift; sourceTree = "<group>"; };
 		C5BAE44C25EE8F8B0064E65A /* LoginPhoneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPhoneVC.swift; sourceTree = "<group>"; };
@@ -97,6 +113,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C527607D25FE6588002F3989 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				C527607E25FE65A4002F3989 /* HistoryVC.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		C527608925FE7AFE002F3989 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				C527608B25FE7B22002F3989 /* FavoriteVC.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		C527608E25FE83C7002F3989 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				C527608F25FE83ED002F3989 /* ChatVC.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
 		C54A6AA925AC585400C34D10 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +170,7 @@
 				C54A6A9C25AB856E00C34D10 /* PersonVC.swift */,
 				C504517325F7D24200FACD2E /* ServicerListVC.swift */,
 				C504517625F7D84C00FACD2E /* ServicerMapVC.swift */,
+				C527607525FE5933002F3989 /* ServicerVC.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -141,6 +182,10 @@
 				C504515A25F7A9A500FACD2E /* JobCategoryCell.xib */,
 				C504516325F7C39B00FACD2E /* ServicerListCell.swift */,
 				C504516425F7C39B00FACD2E /* ServicerListCell.xib */,
+				C527607825FE59C3002F3989 /* ReviewListCell.swift */,
+				C527607925FE59C3002F3989 /* ReviewListCell.xib */,
+				C527608125FE69EE002F3989 /* HistoryGoListCell.swift */,
+				C527608225FE69EE002F3989 /* HistoryGoListCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -168,6 +213,9 @@
 			children = (
 				C5E0DA2325A8AF79008B0BFC /* AppDelegate.swift */,
 				C5E0DA2525A8AF79008B0BFC /* SceneDelegate.swift */,
+				C527608E25FE83C7002F3989 /* Chat */,
+				C527608925FE7AFE002F3989 /* Favorite */,
+				C527607D25FE6588002F3989 /* History */,
 				C54A6AAD25AC88EC00C34D10 /* Home */,
 				C54A6AAB25AC586D00C34D10 /* Signup */,
 				C54A6AA925AC585400C34D10 /* Login */,
@@ -240,9 +288,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C527608425FE69EE002F3989 /* HistoryGoListCell.xib in Resources */,
 				C504516625F7C39B00FACD2E /* ServicerListCell.xib in Resources */,
 				C5E0DA3025A8AF7A008B0BFC /* LaunchScreen.storyboard in Resources */,
 				C504515C25F7A9A500FACD2E /* JobCategoryCell.xib in Resources */,
+				C527607B25FE59C3002F3989 /* ReviewListCell.xib in Resources */,
 				C5E0DA2D25A8AF7A008B0BFC /* Assets.xcassets in Resources */,
 				C5E0DA2B25A8AF79008B0BFC /* Main.storyboard in Resources */,
 			);
@@ -318,21 +368,27 @@
 				C5E0DA2825A8AF79008B0BFC /* HomeVC.swift in Sources */,
 				C5E0DA2425A8AF79008B0BFC /* AppDelegate.swift in Sources */,
 				C504516125F7BBFB00FACD2E /* SubCategoryVC.swift in Sources */,
+				C527608C25FE7B22002F3989 /* FavoriteVC.swift in Sources */,
 				C5BAE46225EE92BF0064E65A /* SignupEmailVC.swift in Sources */,
 				C5BAE45625EE90470064E65A /* ForgotPassResendVC.swift in Sources */,
+				C527608325FE69EE002F3989 /* HistoryGoListCell.swift in Sources */,
 				C5BAE46B25EE92F20064E65A /* SignupPhoneConfirmVC.swift in Sources */,
 				C5BAE44D25EE8F8B0064E65A /* LoginPhoneVC.swift in Sources */,
 				C504516525F7C39B00FACD2E /* ServicerListCell.swift in Sources */,
+				C527607F25FE65A4002F3989 /* HistoryVC.swift in Sources */,
 				C5E0DA2625A8AF79008B0BFC /* SceneDelegate.swift in Sources */,
 				C5BAE45F25EE92AF0064E65A /* SignupHomeVC.swift in Sources */,
 				C5BAE46825EE92E20064E65A /* SignupEmailConfirmVC.swift in Sources */,
 				C54A6A9D25AB856E00C34D10 /* PersonVC.swift in Sources */,
 				C5BAE45325EE90330064E65A /* ForgotPassVC.swift in Sources */,
+				C527607625FE5933002F3989 /* ServicerVC.swift in Sources */,
 				C5BAE46525EE92CF0064E65A /* SignupPhoneVC.swift in Sources */,
 				C5BAE44A25EE8F4F0064E65A /* LoginHomeVC.swift in Sources */,
 				C504517725F7D84C00FACD2E /* ServicerMapVC.swift in Sources */,
 				C5BAE45025EE8F9B0064E65A /* LoginEmailVC.swift in Sources */,
+				C527607A25FE59C3002F3989 /* ReviewListCell.swift in Sources */,
 				C504515B25F7A9A500FACD2E /* JobCategoryCell.swift in Sources */,
+				C527609025FE83ED002F3989 /* ChatVC.swift in Sources */,
 				C504517425F7D24200FACD2E /* ServicerListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

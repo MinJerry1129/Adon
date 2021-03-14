@@ -12,6 +12,7 @@ class ServicerListVC: UIViewController ,UITableViewDelegate,UITableViewDataSourc
     @IBOutlet weak var txtCategoryTitle: UILabel!
     @IBOutlet weak var ServicerListTable: UITableView!
     var servicermapVC : ServicerMapVC!
+    var servicerVC: ServicerVC!
     override func viewDidLoad() {
         super.viewDidLoad()
         ServicerListTable.delegate = self
@@ -26,6 +27,11 @@ class ServicerListVC: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ServicerListCell
         cell.mainView.layer.borderColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.servicerVC = self.storyboard?.instantiateViewController(withIdentifier: "servicerVC") as? ServicerVC
+        self.servicerVC.modalPresentationStyle = .fullScreen
+        self.present(self.servicerVC, animated: true, completion: nil)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150

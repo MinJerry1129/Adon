@@ -11,9 +11,9 @@ class ServicerMapVC: UIViewController {
 
     @IBOutlet weak var txtCategoryTitle: UILabel!
     @IBOutlet weak var mapView: GMSMapView!
+    var servicerVC: ServicerVC!
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
+        super.viewDidLoad()        
     }
     @IBAction func onListBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
