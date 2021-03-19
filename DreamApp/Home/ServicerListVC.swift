@@ -18,9 +18,16 @@ class ServicerListVC: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         ServicerListTable.delegate = self
         ServicerListTable.dataSource = self
         ServicerListTable.register(UINib(nibName: "ServicerListCell", bundle: nil), forCellReuseIdentifier: "cell")
+        setReady()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+    }
+    func setReady(){
+        txtCategoryTitle.text = AppDelegate.shared().serviceName
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

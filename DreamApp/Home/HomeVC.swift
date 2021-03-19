@@ -6,6 +6,10 @@
 //
 
 import UIKit
+import Alamofire
+import SDWebImage
+import JTMaterialSpinner
+import Toast_Swift
 
 class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var footerView: UIView!
@@ -14,20 +18,53 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     var subcategoryVC : SubCategoryVC!
     var personVC : PersonVC!
-    
     var historyVC : HistoryVC!
     var favoriteVC : FavoriteVC!
+    
+    var spinnerView = JTMaterialSpinner()
+    var allCategory = [Category]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         JobListTable.delegate = self
         JobListTable.dataSource = self
         JobListTable.register(UINib(nibName: "JobCategoryCell", bundle: nil), forCellReuseIdentifier: "cell")
+        getData()
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         footerView.roundCorners(corners: [.topLeft, .topRight], radius: 20)
     }
+    func getData(){
+        allCategory = []
+        //
+        self.view.addSubview(spinnerView)
+        spinnerView.frame = CGRect(x: (UIScreen.main.bounds.size.width - 50.0) / 2.0, y: (UIScreen.main.bounds.size.height-50)/2, width: 50, height: 50)
+        spinnerView.circleLayer.lineWidth = 2.0
+        spinnerView.circleLayer.strokeColor = UIColor.orange.cgColor
+        spinnerView.beginRefreshing()
+        
+        AF.request(Global.baseUrl + "api/getHomeData", method: .post, encoding:JSONEncoding.default).responseJSON{ response in
+            print(response)
+            self.spinnerView.endRefreshing()
+            if let value = response.value as? [String: AnyObject] {
+                let categoryInfos = value["categorysInfo"] as? [[String: AnyObject]]
+                if categoryInfos!.count > 0{
+                    for i in 0 ... (categoryInfos!.count)-1 {
+                        let id = categoryInfos![i]["id"] as! String
+                        let name = categoryInfos![i]["name"] as! String
+                        let url = categoryInfos![i]["url"] as! String
+                        
+                        let categoryCell = Category(id: id, name: name, url: url)
+                        self.allCategory.append(categoryCell)
+                    }
+                }
+                
+                self.JobListTable.reloadData()
+            }
+        }
+    }
+    
     
     @IBAction func onAvatarBtn(_ sender: Any) {
         self.personVC = self.storyboard?.instantiateViewController(withIdentifier: "personVC") as? PersonVC
@@ -36,14 +73,22 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return allCategory.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let oneCategory: Category
+        oneCategory =  allCategory[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! JobCategoryCell
+        cell.mainImg.sd_setImage(with: URL(string: Global.baseUrl + oneCategory.url), completed: nil)
+        cell.txtTitle.text = oneCategory.name
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        AppDelegate.shared().categoryID = allCategory[indexPath.row].id
+        AppDelegate.shared().categoryName = allCategory[indexPath.row].name
+        
+        
         self.subcategoryVC = self.storyboard?.instantiateViewController(withIdentifier: "subcategoryVC") as? SubCategoryVC
         self.subcategoryVC.modalPresentationStyle = .fullScreen
         self.present(self.subcategoryVC, animated: true, completion: nil)

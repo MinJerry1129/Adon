@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6089483514C8B49402A6A325 /* Pods_DreamApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F984E4B59FD3ACEB65F59FE6 /* Pods_DreamApp.framework */; };
+		C501C0682604EC9E00BE7297 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C501C0672604EC9E00BE7297 /* Category.swift */; };
+		C501C06C2604ED1B00BE7297 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = C501C06B2604ED1B00BE7297 /* Service.swift */; };
+		C501C06F2604EDCF00BE7297 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = C501C06E2604EDCF00BE7297 /* Global.swift */; };
 		C504515B25F7A9A500FACD2E /* JobCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C504515925F7A9A500FACD2E /* JobCategoryCell.swift */; };
 		C504515C25F7A9A500FACD2E /* JobCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C504515A25F7A9A500FACD2E /* JobCategoryCell.xib */; };
 		C504516125F7BBFB00FACD2E /* SubCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C504516025F7BBFB00FACD2E /* SubCategoryVC.swift */; };
@@ -46,6 +49,9 @@
 /* Begin PBXFileReference section */
 		3DA934695D712947D6EE7BA7 /* Pods-DreamApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamApp.debug.xcconfig"; path = "Target Support Files/Pods-DreamApp/Pods-DreamApp.debug.xcconfig"; sourceTree = "<group>"; };
 		6DA4A7BBE66E6104BEE84ECF /* Pods-DreamApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamApp.release.xcconfig"; path = "Target Support Files/Pods-DreamApp/Pods-DreamApp.release.xcconfig"; sourceTree = "<group>"; };
+		C501C0672604EC9E00BE7297 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		C501C06B2604ED1B00BE7297 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		C501C06E2604EDCF00BE7297 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		C504515925F7A9A500FACD2E /* JobCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCategoryCell.swift; sourceTree = "<group>"; };
 		C504515A25F7A9A500FACD2E /* JobCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobCategoryCell.xib; sourceTree = "<group>"; };
 		C504516025F7BBFB00FACD2E /* SubCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoryVC.swift; sourceTree = "<group>"; };
@@ -111,6 +117,16 @@
 				F984E4B59FD3ACEB65F59FE6 /* Pods_DreamApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C501C0662604EC4200BE7297 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C501C0672604EC9E00BE7297 /* Category.swift */,
+				C501C06B2604ED1B00BE7297 /* Service.swift */,
+				C501C06E2604EDCF00BE7297 /* Global.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		C527607D25FE6588002F3989 /* History */ = {
@@ -213,6 +229,7 @@
 			children = (
 				C5E0DA2325A8AF79008B0BFC /* AppDelegate.swift */,
 				C5E0DA2525A8AF79008B0BFC /* SceneDelegate.swift */,
+				C501C0662604EC4200BE7297 /* Model */,
 				C527608E25FE83C7002F3989 /* Chat */,
 				C527608925FE7AFE002F3989 /* Favorite */,
 				C527607D25FE6588002F3989 /* History */,
@@ -365,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5BAE46E25EE93010064E65A /* SignupInfoVC.swift in Sources */,
+				C501C06C2604ED1B00BE7297 /* Service.swift in Sources */,
 				C5E0DA2825A8AF79008B0BFC /* HomeVC.swift in Sources */,
 				C5E0DA2425A8AF79008B0BFC /* AppDelegate.swift in Sources */,
 				C504516125F7BBFB00FACD2E /* SubCategoryVC.swift in Sources */,
@@ -378,6 +396,7 @@
 				C527607F25FE65A4002F3989 /* HistoryVC.swift in Sources */,
 				C5E0DA2625A8AF79008B0BFC /* SceneDelegate.swift in Sources */,
 				C5BAE45F25EE92AF0064E65A /* SignupHomeVC.swift in Sources */,
+				C501C06F2604EDCF00BE7297 /* Global.swift in Sources */,
 				C5BAE46825EE92E20064E65A /* SignupEmailConfirmVC.swift in Sources */,
 				C54A6A9D25AB856E00C34D10 /* PersonVC.swift in Sources */,
 				C5BAE45325EE90330064E65A /* ForgotPassVC.swift in Sources */,
@@ -387,6 +406,7 @@
 				C504517725F7D84C00FACD2E /* ServicerMapVC.swift in Sources */,
 				C5BAE45025EE8F9B0064E65A /* LoginEmailVC.swift in Sources */,
 				C527607A25FE59C3002F3989 /* ReviewListCell.swift in Sources */,
+				C501C0682604EC9E00BE7297 /* Category.swift in Sources */,
 				C504515B25F7A9A500FACD2E /* JobCategoryCell.swift in Sources */,
 				C527609025FE83ED002F3989 /* ChatVC.swift in Sources */,
 				C504517425F7D24200FACD2E /* ServicerListVC.swift in Sources */,
