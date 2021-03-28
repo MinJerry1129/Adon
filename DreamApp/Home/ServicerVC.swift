@@ -4,10 +4,11 @@
 //
 //  Created by bird on 3/14/21.
 //
-
+import GoogleMobileAds
 import UIKit
 import Cosmos
 class ServicerVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
+    @IBOutlet weak var adsView: UIView!
     @IBOutlet weak var servicerNameTxt: UILabel!
     @IBOutlet weak var servicerImg: UIImageView!
     @IBOutlet weak var servicerNameVTxt: UILabel!
@@ -19,14 +20,26 @@ class ServicerVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     @IBOutlet weak var servicerInfoTxt: UILabel!
     @IBOutlet weak var serviceReviewTB: UITableView!
     
+    private let banner : GADBannerView = {
+        let banner = GADBannerView()
+        banner.adUnitID = "ca-app-pub-8064612229280440/6686469025"
+        banner.load(GADRequest())
+        return banner
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         serviceReviewTB.delegate = self
         serviceReviewTB.dataSource = self
         serviceReviewTB.register(UINib(nibName: "ReviewListCell", bundle: nil), forCellReuseIdentifier: "cell")
+        banner.rootViewController = self
+        adsView.addSubview(banner)
     }
-    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        banner.frame = CGRect(x: 0, y: 0, width: adsView.frame.size.width, height: adsView.frame.size.height)
+        
+    }
     @IBAction func onRequestService(_ sender: Any) {
     }
     

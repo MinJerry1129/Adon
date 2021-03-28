@@ -4,7 +4,7 @@
 //
 //  Created by bird on 3/9/21.
 //
-
+import GoogleMobileAds
 import UIKit
 
 class ServicerListVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
@@ -13,15 +13,29 @@ class ServicerListVC: UIViewController ,UITableViewDelegate,UITableViewDataSourc
     @IBOutlet weak var ServicerListTable: UITableView!
     var servicermapVC : ServicerMapVC!
     var servicerVC: ServicerVC!
+    @IBOutlet weak var adsView: UIView!
+    private let banner : GADBannerView = {
+        let banner = GADBannerView()
+        banner.adUnitID = "ca-app-pub-8064612229280440/6686469025"
+        banner.load(GADRequest())
+        banner.backgroundColor = .secondarySystemBackground
+        return banner
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         ServicerListTable.delegate = self
         ServicerListTable.dataSource = self
         ServicerListTable.register(UINib(nibName: "ServicerListCell", bundle: nil), forCellReuseIdentifier: "cell")
+        banner.rootViewController = self
+        adsView.addSubview(banner)
         setReady()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+    }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        banner.frame = CGRect(x: 0, y: 0, width: adsView.frame.size.width, height: adsView.frame.height)
     }
     func setReady(){
         txtCategoryTitle.text = AppDelegate.shared().serviceName

@@ -17,4 +17,7 @@ target 'DreamApp' do
   pod 'SDWebImage'
   pod 'Toast-Swift'
   pod 'Cosmos'
+  pod 'Google-Mobile-Ads-SDK'
+  
+  pod 'Firebase/Analytics'
 end

@@ -15,9 +15,10 @@ class HistoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var allBtn: UIButton!
     @IBOutlet weak var historyTB: UITableView!
     
+    
     var homeVC : HomeVC!
     var favoriteVC : FavoriteVC!
-    
+    var chatVC : ChatVC!
     override func viewDidLoad() {
         super.viewDidLoad()
         historyTB.delegate = self
@@ -67,6 +68,11 @@ class HistoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.favoriteVC = self.storyboard?.instantiateViewController(withIdentifier: "favoriteVC") as? FavoriteVC
         self.favoriteVC.modalPresentationStyle = .fullScreen
         self.present(self.favoriteVC, animated: true, completion: nil)
+    }
+    @IBAction func onChatBtn(_ sender: Any) {
+        self.chatVC = self.storyboard?.instantiateViewController(withIdentifier: "chatVC") as? ChatVC
+        self.chatVC.modalPresentationStyle = .fullScreen
+        self.present(self.chatVC, animated: true, completion: nil)
     }
     
 }

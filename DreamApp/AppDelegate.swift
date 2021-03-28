@@ -4,10 +4,11 @@
 //
 //  Created by bird on 1/8/21.
 //
-
+import GoogleMobileAds
 import UIKit
 import IQKeyboardManagerSwift
 import GoogleMaps
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     let googleApiKey = "AIzaSyDlHehSkS1jY6ZXAg_vUUZcZ22rKYhbgtE"
@@ -16,11 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var categoryName : String!
     var serviceID : String!
     var serviceName : String!
+    var userID : String!
+    var loginStatus = "no"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         GMSServices.provideAPIKey(googleApiKey)
         IQKeyboardManager.shared.enable = true
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
         return true
     }
 

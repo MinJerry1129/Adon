@@ -25,8 +25,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img5" translatesAutoresizingMaskIntoConstraints="NO" id="Tme-OP-hJw">
                                 <rect key="frame" x="0.0" y="0.0" width="411" height="201"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SERVIÇOS DE OBRAS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLK-oG-Qnm">
-                                <rect key="frame" x="10" y="173" width="163.5" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SERVIÇOS DE OBRAS" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLK-oG-Qnm">
+                                <rect key="frame" x="10" y="173" width="391" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
                                 <color key="textColor" name="textWhite"/>
                                 <nil key="highlightedColor"/>
@@ -39,6 +39,7 @@
                             <constraint firstItem="Tme-OP-hJw" firstAttribute="centerX" secondItem="7ri-Gl-Xdd" secondAttribute="centerX" id="564-X8-Vbk"/>
                             <constraint firstItem="Tme-OP-hJw" firstAttribute="height" secondItem="7ri-Gl-Xdd" secondAttribute="height" id="Dhz-TH-CZ6"/>
                             <constraint firstItem="Tme-OP-hJw" firstAttribute="centerY" secondItem="7ri-Gl-Xdd" secondAttribute="centerY" id="Yrf-My-ZLv"/>
+                            <constraint firstAttribute="trailing" secondItem="VLK-oG-Qnm" secondAttribute="trailing" constant="10" id="Zqj-jj-2DA"/>
                             <constraint firstItem="Tme-OP-hJw" firstAttribute="width" secondItem="7ri-Gl-Xdd" secondAttribute="width" id="df8-eL-VQh"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>

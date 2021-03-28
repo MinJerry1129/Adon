@@ -20,6 +20,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     var personVC : PersonVC!
     var historyVC : HistoryVC!
     var favoriteVC : FavoriteVC!
+    var chatVC : ChatVC!
     
     var spinnerView = JTMaterialSpinner()
     var allCategory = [Category]()
@@ -107,6 +108,12 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         self.favoriteVC = self.storyboard?.instantiateViewController(withIdentifier: "favoriteVC") as? FavoriteVC
         self.favoriteVC.modalPresentationStyle = .fullScreen
         self.present(self.favoriteVC, animated: true, completion: nil)
+    }
+    
+    @IBAction func onChatBtn(_ sender: Any) {
+        self.chatVC = self.storyboard?.instantiateViewController(withIdentifier: "chatVC") as? ChatVC
+        self.chatVC.modalPresentationStyle = .fullScreen
+        self.present(self.chatVC, animated: true, completion: nil)
     }
     
 }

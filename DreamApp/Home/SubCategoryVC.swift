@@ -4,7 +4,7 @@
 //
 //  Created by bird on 3/9/21.
 //
-
+import GoogleMobileAds
 import UIKit
 import Alamofire
 import SDWebImage
@@ -12,6 +12,7 @@ import Toast_Swift
 import JTMaterialSpinner
 class SubCategoryVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
+    @IBOutlet weak var adsView: UIView!
     @IBOutlet weak var txtJobTitle: UILabel!
     @IBOutlet weak var JobListTable: UITableView!
     
@@ -19,14 +20,26 @@ class SubCategoryVC: UIViewController,UITableViewDelegate,UITableViewDataSource 
     
     var spinnerView = JTMaterialSpinner()
     var allServices = [Service]()
+    private let banner : GADBannerView = {
+        let banner = GADBannerView()
+        banner.adUnitID = "ca-app-pub-8064612229280440/6686469025"
+        banner.load(GADRequest())
+        return banner
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         JobListTable.delegate = self
         JobListTable.dataSource = self
         JobListTable.register(UINib(nibName: "JobCategoryCell", bundle: nil), forCellReuseIdentifier: "cell")
+        banner.rootViewController = self
+        adsView.addSubview(banner)
         setReady()
-        getData()
+        getData()        
+    }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        banner.frame = CGRect(x: 0, y: 0, width: adsView.frame.size.width, height: adsView.frame.size.height)
         
     }
     func setReady(){
