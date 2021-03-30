@@ -18,7 +18,7 @@
 		C504516625F7C39B00FACD2E /* ServicerListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C504516425F7C39B00FACD2E /* ServicerListCell.xib */; };
 		C504517425F7D24200FACD2E /* ServicerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C504517325F7D24200FACD2E /* ServicerListVC.swift */; };
 		C504517725F7D84C00FACD2E /* ServicerMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C504517625F7D84C00FACD2E /* ServicerMapVC.swift */; };
-		C51C01182610D37D00C6B0F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C51C01172610D37D00C6B0F1 /* GoogleService-Info.plist */; };
+		C51B3BBB2612AA9B001C2A09 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C51B3BBA2612AA9B001C2A09 /* GoogleService-Info.plist */; };
 		C527607625FE5933002F3989 /* ServicerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C527607525FE5933002F3989 /* ServicerVC.swift */; };
 		C527607A25FE59C3002F3989 /* ReviewListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C527607825FE59C3002F3989 /* ReviewListCell.swift */; };
 		C527607B25FE59C3002F3989 /* ReviewListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C527607925FE59C3002F3989 /* ReviewListCell.xib */; };
@@ -109,7 +109,7 @@
 		C504516425F7C39B00FACD2E /* ServicerListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicerListCell.xib; sourceTree = "<group>"; };
 		C504517325F7D24200FACD2E /* ServicerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicerListVC.swift; sourceTree = "<group>"; };
 		C504517625F7D84C00FACD2E /* ServicerMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicerMapVC.swift; sourceTree = "<group>"; };
-		C51C01172610D37D00C6B0F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C51B3BBA2612AA9B001C2A09 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C527607525FE5933002F3989 /* ServicerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicerVC.swift; sourceTree = "<group>"; };
 		C527607825FE59C3002F3989 /* ReviewListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListCell.swift; sourceTree = "<group>"; };
 		C527607925FE59C3002F3989 /* ReviewListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewListCell.xib; sourceTree = "<group>"; };
@@ -336,7 +336,7 @@
 			children = (
 				C5E0DA2325A8AF79008B0BFC /* AppDelegate.swift */,
 				C5E0DA2525A8AF79008B0BFC /* SceneDelegate.swift */,
-				C51C01172610D37D00C6B0F1 /* GoogleService-Info.plist */,
+				C51B3BBA2612AA9B001C2A09 /* GoogleService-Info.plist */,
 				C5FE3999260D6CC200E4416F /* Font  */,
 				C501C0662604EC4200BE7297 /* Model */,
 				C527608E25FE83C7002F3989 /* Chat */,
@@ -498,7 +498,7 @@
 				C527607B25FE59C3002F3989 /* ReviewListCell.xib in Resources */,
 				C5FE39D9260D6CC200E4416F /* MontserratAlternates-ExtraBold.otf in Resources */,
 				C5FE39E1260D6CC200E4416F /* Montserrat-Black.otf in Resources */,
-				C51C01182610D37D00C6B0F1 /* GoogleService-Info.plist in Resources */,
+				C51B3BBB2612AA9B001C2A09 /* GoogleService-Info.plist in Resources */,
 				C5E0DA2D25A8AF7A008B0BFC /* Assets.xcassets in Resources */,
 				C5FE39CF260D6CC200E4416F /* MontserratAlternates-ExtraLightItalic.otf in Resources */,
 				C5FE39C7260D6CC200E4416F /* Montserrat-BoldItalic.otf in Resources */,

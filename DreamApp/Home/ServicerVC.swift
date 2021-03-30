@@ -21,8 +21,9 @@ class ServicerVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     @IBOutlet weak var serviceReviewTB: UITableView!
     
     private let banner : GADBannerView = {
+//        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [""]
         let banner = GADBannerView()
-        banner.adUnitID = "ca-app-pub-8064612229280440/6686469025"
+        banner.adUnitID = Global.admobID
         banner.load(GADRequest())
         return banner
     }()
@@ -33,12 +34,13 @@ class ServicerVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
         serviceReviewTB.dataSource = self
         serviceReviewTB.register(UINib(nibName: "ReviewListCell", bundle: nil), forCellReuseIdentifier: "cell")
         banner.rootViewController = self
+        banner.delegate = self
+        
         adsView.addSubview(banner)
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        banner.frame = CGRect(x: 0, y: 0, width: adsView.frame.size.width, height: adsView.frame.size.height)
-        
+        banner.frame = CGRect(x: 0, y: 0, width: adsView.frame.size.width, height: adsView.frame.size.height)        
     }
     @IBAction func onRequestService(_ sender: Any) {
     }
@@ -59,5 +61,40 @@ class ServicerVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     
     @IBAction func onBackBtn(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension ServicerVC: GADBannerViewDelegate {
+    /// Tells the delegate an ad request loaded an ad.
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+      print("adViewDidReceiveAd")
+    }
+
+    /// Tells the delegate an ad request failed.
+    func adView(_ bannerView: GADBannerView,
+        didFailToReceiveAdWithError error: GADRequestError) {
+      print("adView:didFailToReceiveAdWithError: \(error.localizedDescription)")
+    }
+
+    /// Tells the delegate that a full-screen view will be presented in response
+    /// to the user clicking on an ad.
+    func adViewWillPresentScreen(_ bannerView: GADBannerView) {
+      print("adViewWillPresentScreen")
+    }
+
+    /// Tells the delegate that the full-screen view will be dismissed.
+    func adViewWillDismissScreen(_ bannerView: GADBannerView) {
+      print("adViewWillDismissScreen")
+    }
+
+    /// Tells the delegate that the full-screen view has been dismissed.
+    func adViewDidDismissScreen(_ bannerView: GADBannerView) {
+      print("adViewDidDismissScreen")
+    }
+
+    /// Tells the delegate that a user click will open another app (such as
+    /// the App Store), backgrounding the current app.
+    func adViewWillLeaveApplication(_ bannerView: GADBannerView) {
+      print("adViewWillLeaveApplication")
     }
 }

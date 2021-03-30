@@ -16,7 +16,7 @@ class ServicerListVC: UIViewController ,UITableViewDelegate,UITableViewDataSourc
     @IBOutlet weak var adsView: UIView!
     private let banner : GADBannerView = {
         let banner = GADBannerView()
-        banner.adUnitID = "ca-app-pub-8064612229280440/6686469025"
+        banner.adUnitID = Global.admobID
         banner.load(GADRequest())
         banner.backgroundColor = .secondarySystemBackground
         return banner

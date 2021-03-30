@@ -4,11 +4,10 @@
 //
 //  Created by bird on 1/8/21.
 //
-import GoogleMobileAds
 import UIKit
 import IQKeyboardManagerSwift
 import GoogleMaps
-
+import Firebase
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     let googleApiKey = "AIzaSyDlHehSkS1jY6ZXAg_vUUZcZ22rKYhbgtE"
@@ -24,7 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         GMSServices.provideAPIKey(googleApiKey)
         IQKeyboardManager.shared.enable = true
+        
+        FirebaseApp.configure()
         GADMobileAds.sharedInstance().start(completionHandler: nil)
+        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [kGADSimulatorID as! String]
         return true
     }
 
