@@ -19,4 +19,5 @@ target 'DreamApp' do
   pod 'Cosmos'
   pod 'Firebase/Analytics'
   pod 'Firebase/AdMob'
+  pod 'Firebase/Auth'
 end

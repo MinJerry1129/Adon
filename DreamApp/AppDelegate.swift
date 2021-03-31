@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var serviceName : String!
     var userID : String!
     var loginStatus = "no"
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

@@ -43,7 +43,6 @@ class HistoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellgo", for: indexPath) as! HistoryGoListCell
             return cell
         }
-        
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        self.subcategoryVC = self.storyboard?.instantiateViewController(withIdentifier: "subcategoryVC") as? SubCategoryVC

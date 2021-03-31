@@ -21,15 +21,20 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     var historyVC : HistoryVC!
     var favoriteVC : FavoriteVC!
     var chatVC : ChatVC!
+    var loginhomeVC : LoginHomeVC!
     
     var spinnerView = JTMaterialSpinner()
     var allCategory = [Category]()
-    
+    var loginStatus = "no"
     override func viewDidLoad() {
         super.viewDidLoad()
         JobListTable.delegate = self
         JobListTable.dataSource = self
         JobListTable.register(UINib(nibName: "JobCategoryCell", bundle: nil), forCellReuseIdentifier: "cell")
+        loginStatus = UserDefaults.standard.string(forKey: "loginStatus") ?? "no"
+        if loginStatus == "no"{
+            avatarView.isHidden = true
+        }
         getData()
     }
     override func viewDidLayoutSubviews() {
@@ -68,9 +73,13 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     
     @IBAction func onAvatarBtn(_ sender: Any) {
-        self.personVC = self.storyboard?.instantiateViewController(withIdentifier: "personVC") as? PersonVC
-        self.personVC.modalPresentationStyle = .fullScreen
-        self.present(self.personVC, animated: true, completion: nil)
+        if loginStatus == "no"{
+            onGoLoginVC()
+        }else{
+            self.personVC = self.storyboard?.instantiateViewController(withIdentifier: "personVC") as? PersonVC
+            self.personVC.modalPresentationStyle = .fullScreen
+            self.present(self.personVC, animated: true, completion: nil)
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -97,23 +106,40 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }
-    
+    func onGoLoginVC(){
+        self.loginhomeVC = self.storyboard?.instantiateViewController(withIdentifier: "loginhomeVC") as? LoginHomeVC
+        self.loginhomeVC.modalPresentationStyle = .fullScreen
+        self.present(self.loginhomeVC, animated: true, completion: nil)
+    }
     @IBAction func onHistoryBtn(_ sender: Any) {
-        self.historyVC = self.storyboard?.instantiateViewController(withIdentifier: "historyVC") as? HistoryVC
-        self.historyVC.modalPresentationStyle = .fullScreen
-        self.present(self.historyVC, animated: true, completion: nil)
+        if loginStatus == "no"{
+            onGoLoginVC()
+        }else{
+            self.historyVC = self.storyboard?.instantiateViewController(withIdentifier: "historyVC") as? HistoryVC
+            self.historyVC.modalPresentationStyle = .fullScreen
+            self.present(self.historyVC, animated: true, completion: nil)
+        }
+        
     }
     
     @IBAction func onFavoriteBtn(_ sender: Any) {
-        self.favoriteVC = self.storyboard?.instantiateViewController(withIdentifier: "favoriteVC") as? FavoriteVC
-        self.favoriteVC.modalPresentationStyle = .fullScreen
-        self.present(self.favoriteVC, animated: true, completion: nil)
+        if loginStatus == "no"{
+            onGoLoginVC()
+        }else{
+            self.favoriteVC = self.storyboard?.instantiateViewController(withIdentifier: "favoriteVC") as? FavoriteVC
+            self.favoriteVC.modalPresentationStyle = .fullScreen
+            self.present(self.favoriteVC, animated: true, completion: nil)
+        }
     }
     
     @IBAction func onChatBtn(_ sender: Any) {
-        self.chatVC = self.storyboard?.instantiateViewController(withIdentifier: "chatVC") as? ChatVC
-        self.chatVC.modalPresentationStyle = .fullScreen
-        self.present(self.chatVC, animated: true, completion: nil)
+        if loginStatus == "no"{
+            onGoLoginVC()
+        }else{
+            self.chatVC = self.storyboard?.instantiateViewController(withIdentifier: "chatVC") as? ChatVC
+            self.chatVC.modalPresentationStyle = .fullScreen
+            self.present(self.chatVC, animated: true, completion: nil)
+        }
     }
     
 }
