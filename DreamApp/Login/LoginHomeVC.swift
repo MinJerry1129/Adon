@@ -9,6 +9,7 @@ import UIKit
 
 class LoginHomeVC: UIViewController {
     var signuphomeVC : SignupHomeVC!
+    var loginemailVC : LoginEmailVC!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +24,10 @@ class LoginHomeVC: UIViewController {
     }
     
     @IBAction func onBtnEmail(_ sender: Any) {
+        self.loginemailVC = self.storyboard?.instantiateViewController(withIdentifier: "loginemailVC") as? LoginEmailVC
+        self.loginemailVC.modalPresentationStyle = .fullScreen
+        self.present(self.loginemailVC, animated: true, completion: nil)
         
-    }
-    
-    @IBAction func onBtnPhone(_ sender: Any) {
     }
     
     @IBAction func onBtnSignUp(_ sender: Any) {

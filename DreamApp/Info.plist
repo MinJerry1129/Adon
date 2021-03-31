@@ -68,16 +68,16 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Application wants to use your location</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Application wants to use your location</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Application wants to use your location</string>
-	<key>NSCameraUsageDescription</key>
-	<string>This app wants to take pictures.</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>This app wants to use your photos.</string>
+    <key>NSCameraUsageDescription</key>
+    <string>$(PRODUCT_NAME) wants to take pictures for publish.</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>Your location is used to show local clinics</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Your location is used to show local clinics</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Your location is used to show local clinics</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>$(PRODUCT_NAME) wants to use your photos for publish.</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

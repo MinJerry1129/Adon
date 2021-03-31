@@ -29,12 +29,6 @@ class SignupHomeVC: UIViewController {
         self.present(self.signupemailVC, animated: true, completion: nil)
     }
     
-    @IBAction func onBtnPhone(_ sender: Any) {
-        self.signupphoneVC = self.storyboard?.instantiateViewController(withIdentifier: "signupphoneVC") as? SignupPhoneVC
-        self.signupphoneVC.modalPresentationStyle = .fullScreen
-        self.present(self.signupphoneVC, animated: true, completion: nil)
-    }
-    
     @IBAction func onBtnSignin(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

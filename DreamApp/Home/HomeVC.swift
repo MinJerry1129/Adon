@@ -31,7 +31,10 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         JobListTable.delegate = self
         JobListTable.dataSource = self
         JobListTable.register(UINib(nibName: "JobCategoryCell", bundle: nil), forCellReuseIdentifier: "cell")
-        loginStatus = UserDefaults.standard.string(forKey: "loginStatus") ?? "no"
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        loginStatus = UserDefaults.standard.string(forKey: "loginstatus") ?? "no"
         if loginStatus == "no"{
             avatarView.isHidden = true
         }

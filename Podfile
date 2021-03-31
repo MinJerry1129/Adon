@@ -6,8 +6,8 @@ target 'DreamApp' do
   use_frameworks!
 
   # Pods for DreamApp
-   pod 'GoogleMaps', '~>3.7.0'
-   pod 'GooglePlaces','~>3.7.0'
+   pod 'GoogleMaps'
+   pod 'GooglePlaces'
  
   pod 'GooglePlaces'
   pod 'Alamofire'
