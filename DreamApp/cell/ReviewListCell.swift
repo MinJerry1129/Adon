@@ -13,5 +13,6 @@ class ReviewListCell: UITableViewCell {
     @IBOutlet weak var nameTxt: UILabel!
     @IBOutlet weak var dateTxt: UILabel!
     @IBOutlet weak var reviewRating: CosmosView!
-    @IBOutlet weak var reviewTxt: UITextView!
+    @IBOutlet weak var reviewTxt: UILabel!
+    
 }

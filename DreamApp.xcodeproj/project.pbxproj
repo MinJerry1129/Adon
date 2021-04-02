@@ -28,6 +28,7 @@
 		C527608C25FE7B22002F3989 /* FavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C527608B25FE7B22002F3989 /* FavoriteVC.swift */; };
 		C527609025FE83ED002F3989 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C527608F25FE83ED002F3989 /* ChatVC.swift */; };
 		C54A6A9D25AB856E00C34D10 /* PersonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A6A9C25AB856E00C34D10 /* PersonVC.swift */; };
+		C54F447126177F0D007936AD /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F447026177F0D007936AD /* Review.swift */; };
 		C5BAE44A25EE8F4F0064E65A /* LoginHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BAE44925EE8F4F0064E65A /* LoginHomeVC.swift */; };
 		C5BAE44D25EE8F8B0064E65A /* LoginPhoneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BAE44C25EE8F8B0064E65A /* LoginPhoneVC.swift */; };
 		C5BAE45025EE8F9B0064E65A /* LoginEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BAE44F25EE8F9B0064E65A /* LoginEmailVC.swift */; };
@@ -124,6 +125,7 @@
 		C527608B25FE7B22002F3989 /* FavoriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVC.swift; sourceTree = "<group>"; };
 		C527608F25FE83ED002F3989 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		C54A6A9C25AB856E00C34D10 /* PersonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonVC.swift; sourceTree = "<group>"; };
+		C54F447026177F0D007936AD /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		C5BAE44925EE8F4F0064E65A /* LoginHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHomeVC.swift; sourceTree = "<group>"; };
 		C5BAE44C25EE8F8B0064E65A /* LoginPhoneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPhoneVC.swift; sourceTree = "<group>"; };
 		C5BAE44F25EE8F9B0064E65A /* LoginEmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmailVC.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				C501C0672604EC9E00BE7297 /* Category.swift */,
+				C54F447026177F0D007936AD /* Review.swift */,
 				C5F79FCA2616765500876C7B /* JobRate.swift */,
 				C501C06B2604ED1B00BE7297 /* Service.swift */,
 				C5F79FEB2616AE6200876C7B /* ServicersList.swift */,
@@ -634,6 +637,7 @@
 				C5EFF1F1260C085A00B22E8C /* LeftViewCell.swift in Sources */,
 				C504516525F7C39B00FACD2E /* ServicerListCell.swift in Sources */,
 				C527607F25FE65A4002F3989 /* HistoryVC.swift in Sources */,
+				C54F447126177F0D007936AD /* Review.swift in Sources */,
 				C5E0DA2625A8AF79008B0BFC /* SceneDelegate.swift in Sources */,
 				C5EFF234260C91A700B22E8C /* ChatDetailVC.swift in Sources */,
 				C5BAE45F25EE92AF0064E65A /* SignupHomeVC.swift in Sources */,

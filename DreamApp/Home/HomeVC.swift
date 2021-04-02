@@ -34,6 +34,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         JobListTable.delegate = self
         JobListTable.dataSource = self
         JobListTable.register(UINib(nibName: "JobCategoryCell", bundle: nil), forCellReuseIdentifier: "cell")
+        getData()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
@@ -45,7 +46,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             AppDelegate.shared().user_uid = user_uid
             getUserData()
         }
-        getData()
+        
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()

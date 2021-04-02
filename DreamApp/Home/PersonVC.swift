@@ -50,6 +50,7 @@ class PersonVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func getUserData(){
+        allJobRate = []
         self.view.addSubview(spinnerView)
         spinnerView.frame = CGRect(x: (UIScreen.main.bounds.size.width - 50.0) / 2.0, y: (UIScreen.main.bounds.size.height-50)/2, width: 50, height: 50)
         spinnerView.circleLayer.lineWidth = 2.0
