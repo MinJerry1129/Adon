@@ -55,6 +55,11 @@
 		C5EFF238260C98D500B22E8C /* ChatListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EFF236260C98D400B22E8C /* ChatListViewCell.swift */; };
 		C5EFF239260C98D500B22E8C /* ChatListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5EFF237260C98D400B22E8C /* ChatListViewCell.xib */; };
 		C5EFF23D260C995B00B22E8C /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EFF23C260C995B00B22E8C /* Chat.swift */; };
+		C5F79FA726160C7200876C7B /* ServiceRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F79FA526160C7200876C7B /* ServiceRateCell.swift */; };
+		C5F79FA826160C7200876C7B /* ServiceRateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5F79FA626160C7200876C7B /* ServiceRateCell.xib */; };
+		C5F79FC72616246100876C7B /* AddServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F79FC62616246100876C7B /* AddServiceVC.swift */; };
+		C5F79FCB2616765500876C7B /* JobRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F79FCA2616765500876C7B /* JobRate.swift */; };
+		C5F79FEC2616AE6200876C7B /* ServicersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F79FEB2616AE6200876C7B /* ServicersList.swift */; };
 		C5FE39C1260D6CC200E4416F /* Montserrat-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C5FE399A260D6CC200E4416F /* Montserrat-MediumItalic.otf */; };
 		C5FE39C2260D6CC200E4416F /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C5FE399B260D6CC200E4416F /* Montserrat-Bold.otf */; };
 		C5FE39C3260D6CC200E4416F /* Montserrat-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C5FE399C260D6CC200E4416F /* Montserrat-BlackItalic.otf */; };
@@ -148,6 +153,11 @@
 		C5EFF236260C98D400B22E8C /* ChatListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListViewCell.swift; sourceTree = "<group>"; };
 		C5EFF237260C98D400B22E8C /* ChatListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatListViewCell.xib; sourceTree = "<group>"; };
 		C5EFF23C260C995B00B22E8C /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		C5F79FA526160C7200876C7B /* ServiceRateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRateCell.swift; sourceTree = "<group>"; };
+		C5F79FA626160C7200876C7B /* ServiceRateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceRateCell.xib; sourceTree = "<group>"; };
+		C5F79FC62616246100876C7B /* AddServiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServiceVC.swift; sourceTree = "<group>"; };
+		C5F79FCA2616765500876C7B /* JobRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobRate.swift; sourceTree = "<group>"; };
+		C5F79FEB2616AE6200876C7B /* ServicersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicersList.swift; sourceTree = "<group>"; };
 		C5FE399A260D6CC200E4416F /* Montserrat-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-MediumItalic.otf"; sourceTree = "<group>"; };
 		C5FE399B260D6CC200E4416F /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
 		C5FE399C260D6CC200E4416F /* Montserrat-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BlackItalic.otf"; sourceTree = "<group>"; };
@@ -223,7 +233,9 @@
 			isa = PBXGroup;
 			children = (
 				C501C0672604EC9E00BE7297 /* Category.swift */,
+				C5F79FCA2616765500876C7B /* JobRate.swift */,
 				C501C06B2604ED1B00BE7297 /* Service.swift */,
+				C5F79FEB2616AE6200876C7B /* ServicersList.swift */,
 				C501C06E2604EDCF00BE7297 /* Global.swift */,
 				C5EFF1F5260C08E800B22E8C /* Extension.swift */,
 				C5EFF20F260C09A900B22E8C /* Message.swift */,
@@ -299,6 +311,8 @@
 			isa = PBXGroup;
 			children = (
 				C5EFF1EB260C081000B22E8C /* chatdetail */,
+				C5F79FA526160C7200876C7B /* ServiceRateCell.swift */,
+				C5F79FA626160C7200876C7B /* ServiceRateCell.xib */,
 				C5EFF236260C98D400B22E8C /* ChatListViewCell.swift */,
 				C5EFF237260C98D400B22E8C /* ChatListViewCell.xib */,
 				C504515925F7A9A500FACD2E /* JobCategoryCell.swift */,
@@ -337,6 +351,7 @@
 				C5E0DA2325A8AF79008B0BFC /* AppDelegate.swift */,
 				C5E0DA2525A8AF79008B0BFC /* SceneDelegate.swift */,
 				C51B3BBA2612AA9B001C2A09 /* GoogleService-Info.plist */,
+				C5F79FC52616244300876C7B /* Person */,
 				C5FE3999260D6CC200E4416F /* Font  */,
 				C501C0662604EC4200BE7297 /* Model */,
 				C527608E25FE83C7002F3989 /* Chat */,
@@ -363,6 +378,14 @@
 				C5EFF1EE260C085A00B22E8C /* RightViewCell.xib */,
 			);
 			path = chatdetail;
+			sourceTree = "<group>";
+		};
+		C5F79FC52616244300876C7B /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				C5F79FC62616246100876C7B /* AddServiceVC.swift */,
+			);
+			path = Person;
 			sourceTree = "<group>";
 		};
 		C5FE3999260D6CC200E4416F /* Font  */ = {
@@ -479,6 +502,7 @@
 				C5FE39E4260D6CC200E4416F /* TheMixArab Regular.ttf in Resources */,
 				C5FE39D4260D6CC200E4416F /* Montserrat-SemiBoldItalic.otf in Resources */,
 				C5FE39C4260D6CC200E4416F /* MontserratAlternates-Black.otf in Resources */,
+				C5F79FA826160C7200876C7B /* ServiceRateCell.xib in Resources */,
 				C5FE39CE260D6CC200E4416F /* MontserratAlternates-Bold.otf in Resources */,
 				C5FE39D2260D6CC200E4416F /* Montserrat-Medium.otf in Resources */,
 				C5FE39CB260D6CC200E4416F /* MontserratAlternates-MediumItalic.otf in Resources */,
@@ -590,6 +614,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5F79FCB2616765500876C7B /* JobRate.swift in Sources */,
 				C5BAE46E25EE93010064E65A /* SignupInfoVC.swift in Sources */,
 				C501C06C2604ED1B00BE7297 /* Service.swift in Sources */,
 				C5E0DA2825A8AF79008B0BFC /* HomeVC.swift in Sources */,
@@ -597,8 +622,10 @@
 				C504516125F7BBFB00FACD2E /* SubCategoryVC.swift in Sources */,
 				C527608C25FE7B22002F3989 /* FavoriteVC.swift in Sources */,
 				C5EFF210260C09A900B22E8C /* Message.swift in Sources */,
+				C5F79FEC2616AE6200876C7B /* ServicersList.swift in Sources */,
 				C5BAE46225EE92BF0064E65A /* SignupEmailVC.swift in Sources */,
 				C5EFF1F6260C08E800B22E8C /* Extension.swift in Sources */,
+				C5F79FA726160C7200876C7B /* ServiceRateCell.swift in Sources */,
 				C5BAE45625EE90470064E65A /* ForgotPassResendVC.swift in Sources */,
 				C527608325FE69EE002F3989 /* HistoryGoListCell.swift in Sources */,
 				C5BAE46B25EE92F20064E65A /* SignupPhoneConfirmVC.swift in Sources */,
@@ -621,6 +648,7 @@
 				C5EFF238260C98D500B22E8C /* ChatListViewCell.swift in Sources */,
 				C5BAE45025EE8F9B0064E65A /* LoginEmailVC.swift in Sources */,
 				C527607A25FE59C3002F3989 /* ReviewListCell.swift in Sources */,
+				C5F79FC72616246100876C7B /* AddServiceVC.swift in Sources */,
 				C501C0682604EC9E00BE7297 /* Category.swift in Sources */,
 				C504515B25F7A9A500FACD2E /* JobCategoryCell.swift in Sources */,
 				C527609025FE83ED002F3989 /* ChatVC.swift in Sources */,

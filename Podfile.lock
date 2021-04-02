@@ -101,9 +101,8 @@ DEPENDENCIES:
   - Firebase/AdMob
   - Firebase/Analytics
   - Firebase/Auth
-  - GoogleMaps (~> 3.7.0)
+  - GoogleMaps
   - GooglePlaces
-  - GooglePlaces (~> 3.7.0)
   - iOSDropDown
   - IQKeyboardManagerSwift
   - JTMaterialSpinner
@@ -161,6 +160,6 @@ SPEC CHECKSUMS:
   SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: ee524f010771e65b28050458e73e6d026310f2de
+PODFILE CHECKSUM: d8652c7d502909bd06f57152e5db3c872dba7747
 
 COCOAPODS: 1.10.1

@@ -17,7 +17,9 @@ target 'DreamApp' do
   pod 'SDWebImage'
   pod 'Toast-Swift'
   pod 'Cosmos'
+  pod 'iOSDropDown'
   pod 'Firebase/Analytics'
   pod 'Firebase/AdMob'
   pod 'Firebase/Auth'
+  
 end

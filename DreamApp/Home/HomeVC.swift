@@ -15,6 +15,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var footerView: UIView!
     @IBOutlet weak var JobListTable: UITableView!
     @IBOutlet weak var avatarView: UIView!
+    @IBOutlet weak var imgAvatar: UIImageView!
     
     var subcategoryVC : SubCategoryVC!
     var personVC : PersonVC!
@@ -23,9 +24,11 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     var chatVC : ChatVC!
     var loginhomeVC : LoginHomeVC!
     
+    
     var spinnerView = JTMaterialSpinner()
     var allCategory = [Category]()
     var loginStatus = "no"
+    var user_uid : String!
     override func viewDidLoad() {
         super.viewDidLoad()
         JobListTable.delegate = self
@@ -37,6 +40,10 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         loginStatus = UserDefaults.standard.string(forKey: "loginstatus") ?? "no"
         if loginStatus == "no"{
             avatarView.isHidden = true
+        }else{
+            user_uid = UserDefaults.standard.string(forKey: "useruid")!
+            AppDelegate.shared().user_uid = user_uid
+            getUserData()
         }
         getData()
     }
@@ -44,6 +51,20 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         super.viewDidLayoutSubviews()
         footerView.roundCorners(corners: [.topLeft, .topRight], radius: 20)
     }
+    
+    func getUserData(){
+        let parameters: Parameters = ["uid": user_uid!]
+        AF.request(Global.baseUrl + "api/getuserdata", method: .post, parameters: parameters, encoding:JSONEncoding.default).responseJSON{ response in
+            print(response)
+            if let value = response.value as? [String: AnyObject] {
+                let userinfo = value["userInfo"] as? [String: AnyObject]
+                let avatarImage = userinfo!["avatar"] as! String
+                self.imgAvatar.sd_setImage(with: URL(string: Global.baseUrl + avatarImage), completed: nil)
+            }
+            
+        }
+    }
+    
     func getData(){
         allCategory = []
         //
@@ -68,7 +89,6 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
                         self.allCategory.append(categoryCell)
                     }
                 }
-                
                 self.JobListTable.reloadData()
             }
         }

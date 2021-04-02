@@ -25,6 +25,13 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img5" translatesAutoresizingMaskIntoConstraints="NO" id="Tme-OP-hJw">
                                 <rect key="frame" x="0.0" y="0.0" width="411" height="201"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sag-Q5-ar8">
+                                <rect key="frame" x="0.0" y="161" width="411" height="40"/>
+                                <color key="backgroundColor" name="blackgradiant"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1Ye-1S-IHZ"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SERVIÇOS DE OBRAS" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLK-oG-Qnm">
                                 <rect key="frame" x="10" y="173" width="391" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
@@ -38,9 +45,12 @@
                             <constraint firstAttribute="bottom" secondItem="VLK-oG-Qnm" secondAttribute="bottom" constant="10" id="29U-LK-4VN"/>
                             <constraint firstItem="Tme-OP-hJw" firstAttribute="centerX" secondItem="7ri-Gl-Xdd" secondAttribute="centerX" id="564-X8-Vbk"/>
                             <constraint firstItem="Tme-OP-hJw" firstAttribute="height" secondItem="7ri-Gl-Xdd" secondAttribute="height" id="Dhz-TH-CZ6"/>
+                            <constraint firstItem="sag-Q5-ar8" firstAttribute="width" secondItem="7ri-Gl-Xdd" secondAttribute="width" id="P30-3H-8Q2"/>
                             <constraint firstItem="Tme-OP-hJw" firstAttribute="centerY" secondItem="7ri-Gl-Xdd" secondAttribute="centerY" id="Yrf-My-ZLv"/>
                             <constraint firstAttribute="trailing" secondItem="VLK-oG-Qnm" secondAttribute="trailing" constant="10" id="Zqj-jj-2DA"/>
                             <constraint firstItem="Tme-OP-hJw" firstAttribute="width" secondItem="7ri-Gl-Xdd" secondAttribute="width" id="df8-eL-VQh"/>
+                            <constraint firstItem="sag-Q5-ar8" firstAttribute="centerX" secondItem="7ri-Gl-Xdd" secondAttribute="centerX" id="qCh-eJ-EiZ"/>
+                            <constraint firstAttribute="bottom" secondItem="sag-Q5-ar8" secondAttribute="bottom" id="xNd-aZ-VO0"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
@@ -69,6 +79,9 @@
     </objects>
     <resources>
         <image name="img5" width="740" height="416"/>
+        <namedColor name="blackgradiant">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="textWhite">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
