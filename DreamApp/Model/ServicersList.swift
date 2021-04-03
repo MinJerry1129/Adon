@@ -9,6 +9,7 @@ import Foundation
 struct ServicersList {
     var id : String
     var uid : String
+    var jobid : String
     var firstname : String
     var lastname : String
     var location : String

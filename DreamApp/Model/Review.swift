@@ -18,6 +18,6 @@ struct Review {
     var avatar : String
     var rmark : String
     var review : String
-    
+    var status : String
     
 }

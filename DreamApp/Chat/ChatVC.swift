@@ -27,8 +27,6 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         chatListTB.tableFooterView = UIView()
        
         chatListTB.register(UINib(nibName: "ChatListViewCell", bundle: nil), forCellReuseIdentifier: "cell")
-        
-        
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()

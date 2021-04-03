@@ -3001,6 +3001,9 @@
                                                 <integer key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onBtnAll:" destination="q29-zb-0jv" eventType="touchUpInside" id="914-VT-Dg4"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMn-Mn-z4j">
                                         <rect key="frame" x="145" y="5" width="124.5" height="40"/>
@@ -3017,6 +3020,9 @@
                                                 <integer key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onBtnOngoing:" destination="q29-zb-0jv" eventType="touchUpInside" id="93O-Pa-bQX"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sm4-mi-PiA">
                                         <rect key="frame" x="279.5" y="5" width="124.5" height="40"/>
@@ -3033,6 +3039,9 @@
                                                 <integer key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onBtnComplete:" destination="q29-zb-0jv" eventType="touchUpInside" id="amQ-ld-Zo2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>

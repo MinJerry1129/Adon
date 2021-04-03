@@ -73,6 +73,7 @@ class ServicerListVC: UIViewController ,UITableViewDelegate,UITableViewDataSourc
                     for i in 0 ... (servicersInfo!.count)-1 {
                         let id = servicersInfo![i]["id"] as! String
                         let uid = servicersInfo![i]["uid"] as! String
+                        let jobid = servicersInfo![i]["jobid"] as! String
                         let firstname = servicersInfo![i]["firstname"] as! String
                         let lastname = servicersInfo![i]["lastname"] as! String
                         let location = servicersInfo![i]["location"] as! String
@@ -83,14 +84,13 @@ class ServicerListVC: UIViewController ,UITableViewDelegate,UITableViewDataSourc
                         let fcount = servicersInfo![i]["fcount"] as! Int
                         let lcount = servicersInfo![i]["lcount"] as! Int
                         let rmark = servicersInfo![i]["lmark"] as! Double
-                        if uid != self.user_uid{
-                            let servicerCell = ServicersList(id: id, uid: uid, firstname: firstname, lastname: lastname, location: location, latitude: latitude, longitude: longitude, avatar: avatar, price: price,fcount: fcount, lcount: lcount,rmark: rmark)
+//                        if uid != self.user_uid{
+                            let servicerCell = ServicersList(id: id, uid: uid,jobid: jobid , firstname: firstname, lastname: lastname, location: location, latitude: latitude, longitude: longitude, avatar: avatar, price: price,fcount: fcount, lcount: lcount,rmark: rmark)
                             self.allServicers.append(servicerCell)
-                        }
+//                        }
 //
                     }
                 }
-//                
                 self.ServicerListTable.reloadData()
             }
         }

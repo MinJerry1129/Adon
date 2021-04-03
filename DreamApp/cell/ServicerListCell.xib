@@ -86,7 +86,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GeA-BB-e3M">
                                         <rect key="frame" x="0.0" y="58" width="230.5" height="25"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YgK-va-3mJ" customClass="CosmosView" customModule="Cosmos">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YgK-va-3mJ" customClass="CosmosView" customModule="Cosmos">
                                                 <rect key="frame" x="0.0" y="0.0" width="135" height="25"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="tintColor" name="textBlack"/>
@@ -265,6 +265,11 @@
             <point key="canvasLocation" x="-56.521739130434788" y="116.85267857142857"/>
         </tableViewCell>
     </objects>
+    <designables>
+        <designable name="YgK-va-3mJ">
+            <size key="intrinsicContentSize" width="135.046875" height="20"/>
+        </designable>
+    </designables>
     <resources>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>

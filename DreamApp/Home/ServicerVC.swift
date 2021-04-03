@@ -102,7 +102,7 @@ class ServicerVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
                         let rdate = servicerReviewInfo![i]["date"] as! String
                         
 
-                        let reviewCell = Review(id: id, cuid: cuid, suid: suid, jobid: jobid, firstname: firstname, lastname: lastname, rdate: rdate, avatar: avatar, rmark: rmark, review: review)
+                        let reviewCell = Review(id: id, cuid: cuid, suid: suid, jobid: jobid, firstname: firstname, lastname: lastname, rdate: rdate, avatar: avatar, rmark: rmark, review: review, status: "complete")
                         self.allReviews.append(reviewCell)
                     }
                 }
