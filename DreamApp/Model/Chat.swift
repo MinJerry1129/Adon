@@ -10,7 +10,8 @@ import Foundation
 
 struct Chat {
     var title = ""
-    var imageName = ""
-    var latestMessage = ""
+    var imageUrl = ""
     var sender: String? = nil
+    var status = "no"
+    
 }

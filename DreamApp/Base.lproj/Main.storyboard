@@ -937,7 +937,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZk-IE-bR5">
                                                                 <rect key="frame" x="0.0" y="45" width="194" height="30"/>
                                                                 <subviews>
-                                                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bLX-c0-hPP" customClass="CosmosView" customModule="Cosmos">
+                                                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bLX-c0-hPP" customClass="CosmosView" customModule="Cosmos">
                                                                         <rect key="frame" x="10" y="0.0" width="44" height="30"/>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <constraints>
@@ -3478,10 +3478,26 @@
                                                     <action selector="onBackBtn:" destination="Sb9-Oo-L1V" eventType="touchUpInside" id="BMt-zL-0Q3"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNI-Ac-om8">
+                                                <rect key="frame" x="324" y="10" width="70" height="30"/>
+                                                <color key="backgroundColor" name="RedBrown"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="7Ph-XO-dCU"/>
+                                                    <constraint firstAttribute="width" constant="70" id="7nc-Lu-gIT"/>
+                                                </constraints>
+                                                <state key="normal" title="Accept">
+                                                    <color key="titleColor" name="textWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onAccept:" destination="Sb9-Oo-L1V" eventType="touchUpInside" id="XDe-I2-c9h"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="Srd-R8-2La" firstAttribute="centerY" secondItem="q4F-7D-NzX" secondAttribute="centerY" id="9LS-S1-pUd"/>
+                                            <constraint firstAttribute="trailing" secondItem="bNI-Ac-om8" secondAttribute="trailing" constant="20" id="LxS-cm-LfT"/>
+                                            <constraint firstItem="bNI-Ac-om8" firstAttribute="centerY" secondItem="Srd-R8-2La" secondAttribute="centerY" id="M0i-Lf-GDC"/>
                                             <constraint firstAttribute="height" constant="50" id="vWc-g2-3DG"/>
                                             <constraint firstItem="Srd-R8-2La" firstAttribute="leading" secondItem="q4F-7D-NzX" secondAttribute="leading" constant="10" id="weU-rP-o6Q"/>
                                         </constraints>
@@ -3581,16 +3597,11 @@
             <point key="canvasLocation" x="539" y="2283"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="bLX-c0-hPP">
-            <size key="intrinsicContentSize" width="44.0380859375" height="30"/>
-        </designable>
-    </designables>
     <resources>
         <image name="App_icon" width="567" height="567"/>
         <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <image name="avatar" width="100" height="100"/>
-        <image name="chevron.left" catalog="system" width="32" height="32"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="clock" catalog="system" width="128" height="121"/>
         <image name="close" width="225" height="225"/>
         <image name="coin" width="159" height="159"/>

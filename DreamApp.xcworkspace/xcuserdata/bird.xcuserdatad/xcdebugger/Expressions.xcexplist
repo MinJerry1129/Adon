@@ -24,5 +24,24 @@
       <ContextState
          contextName = "HomeVC.collectionView(_:cellForItemAt:):HomeVC.swift">
       </ContextState>
+      <ContextState
+         contextName = "closure #1 in UITableView.scrollToBottom():Extension.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.numberOfSections">
+            </PersistentString>
+            <PersistentString
+               value = "self.numberOfRows(inSection:  self.numberOfSections-1)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in ChatDetailVC.scrollToBottom():ChatDetailVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

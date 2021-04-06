@@ -6,9 +6,7 @@ target 'DreamApp' do
   use_frameworks!
 
   # Pods for DreamApp
-   pod 'GoogleMaps'
-   pod 'GooglePlaces'
- 
+   pod 'GoogleMaps' 
   pod 'GooglePlaces'
   pod 'Alamofire'
   pod 'JTMaterialSpinner'
@@ -21,5 +19,6 @@ target 'DreamApp' do
   pod 'Firebase/Analytics'
   pod 'Firebase/AdMob'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
   
 end

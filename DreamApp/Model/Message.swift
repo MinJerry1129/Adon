@@ -8,11 +8,12 @@
 import Foundation
 
 enum MessageSide {
-    case left
-    case right
+    case receive
+    case send
 }
 
 struct Message {
     var text = ""
-    var side: MessageSide = .right
+    var date = ""
+    var side: MessageSide = .send
 }

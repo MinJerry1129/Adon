@@ -13,8 +13,13 @@ class ChatDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTable()
-        fetchData()
+        
     }
+    
+    override func viewDidLayoutSubviews() {
+        chatTB.scrollToBottom()
+    }
+    
     func setupTable() {
         // config tableView
         chatTB.rowHeight = UITableView.automaticDimension
@@ -24,18 +29,27 @@ class ChatDetailVC: UIViewController {
         // cell setup
         chatTB.register(UINib(nibName: "RightViewCell", bundle: nil), forCellReuseIdentifier: "RightViewCell")
         chatTB.register(UINib(nibName: "LeftViewCell", bundle: nil), forCellReuseIdentifier: "LeftViewCell")
-        
+        fetchData()
         
     }
     
     func fetchData() {
         chatTB.reloadData()
-        chatTB.scrollToBottom()        
+//        chatTB.scrollToBottom()
     }
     @IBAction func onBackBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    func scrollToBottom(){
+        DispatchQueue.main.async {
+            let indexPath = IndexPath(row: 18, section: 0)
+            self.chatTB.scrollToRow(at: indexPath, at: .bottom, animated: true)
+        }
+    }
     
+    @IBAction func onAccept(_ sender: Any) {
+//        chatTB.scrollToBottom()
+    }
 }
 extension ChatDetailVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

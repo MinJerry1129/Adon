@@ -38,10 +38,15 @@ extension UITableView {
     func scrollToBottom(){
 
         DispatchQueue.main.async {
+            
+            let section = self.numberOfSections-1
+            let row = self.numberOfRows(inSection:  self.numberOfSections-1) - 1
             let indexPath = IndexPath(
-                row: self.numberOfRows(inSection:  self.numberOfSections-1) - 1,
-                section: self.numberOfSections-1)
-            self.scrollToRow(at: indexPath, at: .bottom, animated: true)
+                row:  row,
+                section: section)
+            
+            print("section = \(section) row = \(row)")
+            self.scrollToRow(at: indexPath, at: .none, animated: true)
         }
     }
 }

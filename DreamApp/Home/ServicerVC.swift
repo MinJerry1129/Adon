@@ -12,6 +12,8 @@ import Toast_Swift
 import SDWebImage
 import JTMaterialSpinner
 class ServicerVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
+    var chatVC : ChatVC!
+    var loginhomeVC : LoginHomeVC!
     @IBOutlet weak var adsView: UIView!
     @IBOutlet weak var servicerNameTxt: UILabel!
     @IBOutlet weak var servicerImg: UIImageView!
@@ -33,6 +35,7 @@ class ServicerVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     var user_uid : String!
     var ilike : Int!
     var fcount = 0
+    var loginStatus : String!
     
     var allReviews = [Review]()
     
@@ -54,6 +57,7 @@ class ServicerVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
         suid = AppDelegate.shared().seluser_uid
         jobid = AppDelegate.shared().serviceID
         user_uid = AppDelegate.shared().user_uid
+        loginStatus = AppDelegate.shared().loginStatus
         
         likeImg.isUserInteractionEnabled = true
         let gestureRecognizerw = UITapGestureRecognizer(target: self, action: #selector(setfavorite))
@@ -148,8 +152,8 @@ class ServicerVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
         }else{
             onSetUnlike()
         }
-        
     }
+    
     func onSetLike(){
         self.view.addSubview(spinnerView)
         spinnerView.frame = CGRect(x: (UIScreen.main.bounds.size.width - 50.0) / 2.0, y: (UIScreen.main.bounds.size.height-50)/2, width: 50, height: 50)
@@ -202,6 +206,38 @@ class ServicerVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     
     
     @IBAction func onRequestService(_ sender: Any) {
+        if loginStatus == "no"{
+            self.loginhomeVC = self.storyboard?.instantiateViewController(withIdentifier: "loginhomeVC") as? LoginHomeVC
+            self.loginhomeVC.modalPresentationStyle = .fullScreen
+            self.present(self.loginhomeVC, animated: true, completion: nil)
+        }else{
+            self.view.addSubview(spinnerView)
+            spinnerView.frame = CGRect(x: (UIScreen.main.bounds.size.width - 50.0) / 2.0, y: (UIScreen.main.bounds.size.height-50)/2, width: 50, height: 50)
+            spinnerView.circleLayer.lineWidth = 2.0
+            spinnerView.circleLayer.strokeColor = UIColor.orange.cgColor
+            spinnerView.beginRefreshing()
+            
+            let parameters: Parameters = ["cuid" : user_uid, "suid": suid, "jobid" : jobid]
+            AF.request(Global.baseUrl + "api/requestService", method: .post, parameters: parameters, encoding:JSONEncoding.default).responseJSON{ response in
+                print(response)
+                self.spinnerView.endRefreshing()
+                if let value = response.value as? [String: AnyObject] {
+                    let result = value["status"] as? String
+                    if result == "ok"{
+                        self.chatVC = self.storyboard?.instantiateViewController(withIdentifier: "chatVC") as? ChatVC
+                        self.chatVC.modalPresentationStyle = .fullScreen
+                        self.present(self.chatVC, animated: true, completion: nil)
+                        self.view.makeToast("Requst")
+                    }else{
+                        self.view.makeToast("Set fail!")
+                    }
+                }
+            }
+            
+            
+        }
+        
+        
     }
     
     

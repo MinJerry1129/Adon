@@ -14,6 +14,9 @@ PODS:
     - FirebaseAnalytics (= 7.4.0)
   - Firebase/CoreOnly (7.4.0):
     - FirebaseCore (= 7.4.0)
+  - Firebase/Database (7.4.0):
+    - Firebase/CoreOnly
+    - FirebaseDatabase (~> 7.4.0)
   - FirebaseAnalytics (7.4.0):
     - FirebaseCore (~> 7.0)
     - FirebaseInstallations (~> 7.0)
@@ -37,6 +40,9 @@ PODS:
     - GoogleUtilities/Environment (~> 7.0)
     - GoogleUtilities/Logger (~> 7.0)
     - nanopb (~> 2.30907.0)
+  - FirebaseDatabase (7.4.0):
+    - FirebaseCore (~> 7.0)
+    - leveldb-library (~> 1.22)
   - FirebaseInstallations (7.5.0):
     - FirebaseCore (~> 7.0)
     - GoogleUtilities/Environment (~> 7.0)
@@ -84,6 +90,7 @@ PODS:
   - iOSDropDown (0.3.4)
   - IQKeyboardManagerSwift (6.5.6)
   - JTMaterialSpinner (3.0.5)
+  - leveldb-library (1.22.1)
   - nanopb (2.30907.0):
     - nanopb/decode (= 2.30907.0)
     - nanopb/encode (= 2.30907.0)
@@ -101,6 +108,7 @@ DEPENDENCIES:
   - Firebase/AdMob
   - Firebase/Analytics
   - Firebase/Auth
+  - Firebase/Database
   - GoogleMaps
   - GooglePlaces
   - iOSDropDown
@@ -118,6 +126,7 @@ SPEC REPOS:
     - FirebaseAuth
     - FirebaseCore
     - FirebaseCoreDiagnostics
+    - FirebaseDatabase
     - FirebaseInstallations
     - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
@@ -130,6 +139,7 @@ SPEC REPOS:
     - iOSDropDown
     - IQKeyboardManagerSwift
     - JTMaterialSpinner
+    - leveldb-library
     - nanopb
     - PromisesObjC
     - SDWebImage
@@ -143,6 +153,7 @@ SPEC CHECKSUMS:
   FirebaseAuth: d8dba8db90a1705ee2493857047282ca4f6e7598
   FirebaseCore: 99c06e5a1e8d6952e75cb1f0a6d0b23c0f5ccdcf
   FirebaseCoreDiagnostics: 3770093ac4f2be4590fa03cfa1d3a6e5602d4557
+  FirebaseDatabase: 0a619c887a9565bf4808eba37d2f0ed1d62f62d0
   FirebaseInstallations: a46ae59915f0931e18814164849cd0354bea24ed
   Google-Mobile-Ads-SDK: 2f288748a42920d1c744946a460896a95b0e9110
   GoogleAppMeasurement: 688d7f00e2894d9e13823ed9a028b13b993bc277
@@ -155,11 +166,12 @@ SPEC CHECKSUMS:
   iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   JTMaterialSpinner: 28a0444186b6b2df4206a77d12f7c9dcbe604958
+  leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   nanopb: 59221d7f958fb711001e6a449489542d92ae113e
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: d8652c7d502909bd06f57152e5db3c872dba7747
+PODFILE CHECKSUM: e91893505feccd5dd5510e539ad8f23ad072f2da
 
 COCOAPODS: 1.10.1

@@ -55,6 +55,8 @@ class LoginEmailVC: UIViewController {
                 self.homeVC = self.storyboard?.instantiateViewController(withIdentifier: "homeVC") as? HomeVC
                 self.homeVC.modalPresentationStyle = .fullScreen
                 self.present(self.homeVC, animated: true, completion: nil)
+                
+                
             }
             if let error = error{
                 print("\(error)")

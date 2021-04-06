@@ -25,7 +25,6 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         chatListTB.dataSource = self
         chatListTB.backgroundColor = UIColor(hexString: "E4DDD6")
         chatListTB.tableFooterView = UIView()
-       
         chatListTB.register(UINib(nibName: "ChatListViewCell", bundle: nil), forCellReuseIdentifier: "cell")
     }
     override func viewDidLayoutSubviews() {

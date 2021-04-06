@@ -7,14 +7,13 @@
 //
 
 import UIKit
-
+import SDWebImage
 class ChatListViewCell: UITableViewCell {
 
-    @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var senderLabel: UILabel!
-    @IBOutlet weak var chatTimeLabel: UILabel!
     @IBOutlet weak var chatTitleLabel: UILabel!
     @IBOutlet weak var chatImageView: UIImageView!
+    @IBOutlet weak var alarmImg: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,15 +22,13 @@ class ChatListViewCell: UITableViewCell {
     
     func configure(chat: Chat) {
         chatTitleLabel.text = chat.title
-        if let senderName = chat.sender {
-            senderLabel.isHidden = false
-            senderLabel.text = senderName + ":"
+        senderLabel.text = chat.sender
+        if chat.status == "no"  {
+            alarmImg.isHidden = true
         }
         else {
-            senderLabel.isHidden = true
+            senderLabel.isHidden = false
         }
-        
-        messageLabel.text = chat.latestMessage
-        chatImageView.image = UIImage(named: chat.imageName)
+        chatImageView.sd_setImage(with: URL(string: Global.baseUrl + chat.imageUrl), completed: nil)
     }
 }

@@ -12,6 +12,7 @@ class RightViewCell: UITableViewCell {
 
     @IBOutlet weak var messageContainerView: UIView!
     @IBOutlet weak var textMessageLabel: UILabel!
+    @IBOutlet weak var textMessageDate: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,5 +25,6 @@ class RightViewCell: UITableViewCell {
     
     func configureCell(message: Message) {
         textMessageLabel.text = message.text
+        textMessageDate.text = message.date
     }
 }
