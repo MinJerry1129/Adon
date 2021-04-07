@@ -9,9 +9,12 @@
 import Foundation
 
 struct Chat {
-    var title = ""
-    var imageUrl = ""
-    var sender: String? = nil
+    var id : String
+    var jobtitle = ""
+    var avatar = ""
+    var sendername: String? = nil
     var status = "no"
+    var suid : String
+    var chatuid : String
     
 }

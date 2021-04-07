@@ -21,14 +21,14 @@ class ChatListViewCell: UITableViewCell {
     }
     
     func configure(chat: Chat) {
-        chatTitleLabel.text = chat.title
-        senderLabel.text = chat.sender
+        chatTitleLabel.text = chat.jobtitle
+        senderLabel.text = chat.sendername
         if chat.status == "no"  {
             alarmImg.isHidden = true
         }
         else {
-            senderLabel.isHidden = false
+            alarmImg.isHidden = false
         }
-        chatImageView.sd_setImage(with: URL(string: Global.baseUrl + chat.imageUrl), completed: nil)
+        chatImageView.sd_setImage(with: URL(string: Global.baseUrl + chat.avatar), completed: nil)
     }
 }

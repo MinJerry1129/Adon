@@ -13,7 +13,7 @@ enum MessageSide {
 }
 
 struct Message {
-    var text = ""
-    var date = ""
+    var text : String
+    var date : String
     var side: MessageSide = .send
 }

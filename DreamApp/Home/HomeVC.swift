@@ -43,6 +43,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             avatarView.isHidden = true
         }else{
             user_uid = UserDefaults.standard.string(forKey: "useruid")!
+            AppDelegate.shared().loginStatus = loginStatus
             AppDelegate.shared().user_uid = user_uid
             getUserData()
         }
@@ -84,8 +85,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
                     for i in 0 ... (categoryInfos!.count)-1 {
                         let id = categoryInfos![i]["id"] as! String
                         let name = categoryInfos![i]["name"] as! String
-                        let url = categoryInfos![i]["url"] as! String
-                        
+                        let url = categoryInfos![i]["url"] as! String                        
                         let categoryCell = Category(id: id, name: name, url: url)
                         self.allCategory.append(categoryCell)
                     }
@@ -120,8 +120,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         AppDelegate.shared().categoryID = allCategory[indexPath.row].id
-        AppDelegate.shared().categoryName = allCategory[indexPath.row].name
-        
+        AppDelegate.shared().categoryName = allCategory[indexPath.row].name        
         
         self.subcategoryVC = self.storyboard?.instantiateViewController(withIdentifier: "subcategoryVC") as? SubCategoryVC
         self.subcategoryVC.modalPresentationStyle = .fullScreen

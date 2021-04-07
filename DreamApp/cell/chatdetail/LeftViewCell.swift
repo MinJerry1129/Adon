@@ -25,7 +25,7 @@ class LeftViewCell: UITableViewCell {
     
     func configureCell(message: Message) {
         textMessageLabel.text = message.text
-        textMessageDate.text = message.text
+        textMessageDate.text = message.date
     }
     
 }

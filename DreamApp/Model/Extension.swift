@@ -39,13 +39,13 @@ extension UITableView {
 
         DispatchQueue.main.async {
             
-            let section = self.numberOfSections-1
+            let section = self.numberOfSections - 1
             let row = self.numberOfRows(inSection:  self.numberOfSections-1) - 1
             let indexPath = IndexPath(
                 row:  row,
                 section: section)
-            
-            print("section = \(section) row = \(row)")
+//
+//            print("section = \(section) row = \(row)")
             self.scrollToRow(at: indexPath, at: .none, animated: true)
         }
     }

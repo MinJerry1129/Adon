@@ -937,7 +937,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZk-IE-bR5">
                                                                 <rect key="frame" x="0.0" y="45" width="194" height="30"/>
                                                                 <subviews>
-                                                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bLX-c0-hPP" customClass="CosmosView" customModule="Cosmos">
+                                                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bLX-c0-hPP" customClass="CosmosView" customModule="Cosmos">
                                                                         <rect key="frame" x="10" y="0.0" width="44" height="30"/>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <constraints>
@@ -3518,6 +3518,9 @@
                                                                     <constraint firstAttribute="width" constant="50" id="rhn-IJ-QOV"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Send"/>
+                                                                <connections>
+                                                                    <action selector="onSentMsg:" destination="Sb9-Oo-L1V" eventType="touchUpInside" id="p53-AG-hoz"/>
+                                                                </connections>
                                                             </button>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="McP-1w-540">
                                                                 <rect key="frame" x="20" y="15" width="324" height="40"/>
@@ -3590,6 +3593,7 @@
                     </view>
                     <connections>
                         <outlet property="chatTB" destination="KV0-Oi-K2K" id="oaM-4y-2ty"/>
+                        <outlet property="txtMessage" destination="McP-1w-540" id="bdh-5L-UYa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oq0-4h-clL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -3597,6 +3601,11 @@
             <point key="canvasLocation" x="539" y="2283"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="bLX-c0-hPP">
+            <size key="intrinsicContentSize" width="44.0380859375" height="30"/>
+        </designable>
+    </designables>
     <resources>
         <image name="App_icon" width="567" height="567"/>
         <image name="arrow.backward" catalog="system" width="128" height="98"/>

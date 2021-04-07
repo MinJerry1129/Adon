@@ -104,9 +104,9 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="sampleAvatar" width="249" height="264"/>
+        <image name="sampleAvatar" width="220" height="220"/>
         <namedColor name="RedBrown">
-            <color red="0.65098039215686276" green="0.047058823529411764" blue="0.047058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.65100002288818359" green="0.046999998390674591" blue="0.046999998390674591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

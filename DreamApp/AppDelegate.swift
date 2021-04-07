@@ -16,13 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let googleApiKey = "AIzaSyDlHehSkS1jY6ZXAg_vUUZcZ22rKYhbgtE"
 
     var categoryID : String!
-    var categoryName : String!
     var serviceID : String!
+    var categoryName : String!
     var serviceName : String!
-    var userID : String!
     var loginStatus = "no"
-    var user_uid : String!
+    var userID : String!
+    var user_uid : String!    
     var seluser_uid : String!
+    var chatid : String!
+    var chat_uid : String!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
