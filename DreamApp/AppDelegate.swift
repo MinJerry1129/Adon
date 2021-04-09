@@ -13,7 +13,7 @@ import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    let googleApiKey = "AIzaSyDlHehSkS1jY6ZXAg_vUUZcZ22rKYhbgtE"
+    let googleApiKey = "AIzaSyDZx9W7rJtP2i8RQ25flGLxUGyYg6iprRA"
 
     var categoryID : String!
     var serviceID : String!
@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSServices.provideAPIKey(googleApiKey)
         IQKeyboardManager.shared.enable = true
         
-        GMSPlacesClient.provideAPIKey("AIzaSyDlHehSkS1jY6ZXAg_vUUZcZ22rKYhbgtE")
+        GMSPlacesClient.provideAPIKey(googleApiKey)
         
         FirebaseApp.configure()
         GADMobileAds.sharedInstance().start(completionHandler: nil)

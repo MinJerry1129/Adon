@@ -27,6 +27,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        chatListTB.isUserInteractionEnabled = false
         chatListTB.rowHeight = UITableView.automaticDimension
         chatListTB.delegate = self
         chatListTB.dataSource = self
@@ -34,6 +35,11 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         chatListTB.tableFooterView = UIView()
         chatListTB.register(UINib(nibName: "ChatListViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         user_uid = AppDelegate.shared().user_uid
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        chatListTB.isHidden = true
         getUserData()
     }
     override func viewDidLayoutSubviews() {
@@ -53,6 +59,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             self.spinnerView.endRefreshing()
             print(response)
             self.allChatList = []
+            
             if let value = response.value as? [String: AnyObject] {
                 let chatlist = value["chatlist"] as? [[String: AnyObject]]
                 if chatlist!.count > 0{
@@ -71,7 +78,9 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 }
                 
             }
+            self.chatListTB.isHidden = false
             self.chatListTB.reloadData()
+            self.chatListTB.isUserInteractionEnabled = true
         }
     }
     

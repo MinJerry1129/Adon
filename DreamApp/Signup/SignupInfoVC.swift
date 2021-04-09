@@ -181,7 +181,6 @@ extension SignupInfoVC:  UIImagePickerControllerDelegate, UINavigationController
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.isNavigationBarHidden = false
-        imgsel = "no"
         self.dismiss(animated: true, completion: nil)
     }
 }

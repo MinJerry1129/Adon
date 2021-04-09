@@ -76,7 +76,6 @@ class ChatDetailVC: UIViewController {
             self.allMsg.append(onemsg)
             self.chatTB.reloadData()
             self.chatTB.scrollToBottom()
-            
         }
     }
     
@@ -120,8 +119,7 @@ class ChatDetailVC: UIViewController {
     }
     @IBAction func onBackBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-    }
-    
+    }    
 }
 extension ChatDetailVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -27,6 +27,9 @@
 		C527608425FE69EE002F3989 /* HistoryGoListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C527608225FE69EE002F3989 /* HistoryGoListCell.xib */; };
 		C527608C25FE7B22002F3989 /* FavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C527608B25FE7B22002F3989 /* FavoriteVC.swift */; };
 		C527609025FE83ED002F3989 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C527608F25FE83ED002F3989 /* ChatVC.swift */; };
+		C52A7615261F830600714405 /* Servicer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52A7614261F830600714405 /* Servicer.storyboard */; };
+		C52A7619261F866100714405 /* UpdateInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52A7618261F866100714405 /* UpdateInfoVC.swift */; };
+		C52A761D261FC82C00714405 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52A761C261FC82C00714405 /* SettingVC.swift */; };
 		C54A6A9D25AB856E00C34D10 /* PersonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A6A9C25AB856E00C34D10 /* PersonVC.swift */; };
 		C54F447126177F0D007936AD /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F447026177F0D007936AD /* Review.swift */; };
 		C54F44772617FBB7007936AD /* FavoriteListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F44752617FBB7007936AD /* FavoriteListCell.swift */; };
@@ -126,6 +129,9 @@
 		C527608225FE69EE002F3989 /* HistoryGoListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryGoListCell.xib; sourceTree = "<group>"; };
 		C527608B25FE7B22002F3989 /* FavoriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVC.swift; sourceTree = "<group>"; };
 		C527608F25FE83ED002F3989 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		C52A7614261F830600714405 /* Servicer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Servicer.storyboard; sourceTree = "<group>"; };
+		C52A7618261F866100714405 /* UpdateInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateInfoVC.swift; sourceTree = "<group>"; };
+		C52A761C261FC82C00714405 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		C54A6A9C25AB856E00C34D10 /* PersonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonVC.swift; sourceTree = "<group>"; };
 		C54F447026177F0D007936AD /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		C54F44752617FBB7007936AD /* FavoriteListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListCell.swift; sourceTree = "<group>"; };
@@ -276,6 +282,14 @@
 			path = Chat;
 			sourceTree = "<group>";
 		};
+		C52A761B261FC81300714405 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				C52A761C261FC82C00714405 /* SettingVC.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		C54A6AA925AC585400C34D10 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +373,7 @@
 			children = (
 				C5E0DA2325A8AF79008B0BFC /* AppDelegate.swift */,
 				C5E0DA2525A8AF79008B0BFC /* SceneDelegate.swift */,
+				C52A761B261FC81300714405 /* Setting */,
 				C51B3BBA2612AA9B001C2A09 /* GoogleService-Info.plist */,
 				C5F79FC52616244300876C7B /* Person */,
 				C5FE3999260D6CC200E4416F /* Font  */,
@@ -371,6 +386,7 @@
 				C54A6AA925AC585400C34D10 /* Login */,
 				C567A5EF25AA0CCA00F9E97E /* cell */,
 				C5E0DA2925A8AF79008B0BFC /* Main.storyboard */,
+				C52A7614261F830600714405 /* Servicer.storyboard */,
 				C5E0DA2C25A8AF7A008B0BFC /* Assets.xcassets */,
 				C5E0DA2E25A8AF7A008B0BFC /* LaunchScreen.storyboard */,
 				C5E0DA3125A8AF7A008B0BFC /* Info.plist */,
@@ -393,6 +409,7 @@
 			isa = PBXGroup;
 			children = (
 				C5F79FC62616246100876C7B /* AddServiceVC.swift */,
+				C52A7618261F866100714405 /* UpdateInfoVC.swift */,
 			);
 			path = Person;
 			sourceTree = "<group>";
@@ -545,6 +562,7 @@
 				C5FE39E7260D6CC200E4416F /* Montserrat-SemiBold.otf in Resources */,
 				C5FE39D3260D6CC200E4416F /* MontserratAlternates-SemiBoldItalic.otf in Resources */,
 				C5FE39C9260D6CC200E4416F /* Montserrat-ThinItalic.otf in Resources */,
+				C52A7615261F830600714405 /* Servicer.storyboard in Resources */,
 				C5FE39D1260D6CC200E4416F /* Montserrat-LightItalic.otf in Resources */,
 				C5FE39E2260D6CC200E4416F /* TheMixArab Bold.ttf in Resources */,
 				C5E0DA2B25A8AF79008B0BFC /* Main.storyboard in Resources */,
@@ -647,11 +665,13 @@
 				C54F447126177F0D007936AD /* Review.swift in Sources */,
 				C5E0DA2625A8AF79008B0BFC /* SceneDelegate.swift in Sources */,
 				C5EFF234260C91A700B22E8C /* ChatDetailVC.swift in Sources */,
+				C52A7619261F866100714405 /* UpdateInfoVC.swift in Sources */,
 				C54F44772617FBB7007936AD /* FavoriteListCell.swift in Sources */,
 				C5BAE45F25EE92AF0064E65A /* SignupHomeVC.swift in Sources */,
 				C501C06F2604EDCF00BE7297 /* Global.swift in Sources */,
 				C5BAE46825EE92E20064E65A /* SignupEmailConfirmVC.swift in Sources */,
 				C54A6A9D25AB856E00C34D10 /* PersonVC.swift in Sources */,
+				C52A761D261FC82C00714405 /* SettingVC.swift in Sources */,
 				C5BAE45325EE90330064E65A /* ForgotPassVC.swift in Sources */,
 				C527607625FE5933002F3989 /* ServicerVC.swift in Sources */,
 				C5BAE46525EE92CF0064E65A /* SignupPhoneVC.swift in Sources */,
@@ -814,7 +834,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = X7KG3RM5JT;
 				INFOPLIST_FILE = DreamApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -836,7 +856,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = X7KG3RM5JT;
 				INFOPLIST_FILE = DreamApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
