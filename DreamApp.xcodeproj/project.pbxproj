@@ -61,6 +61,7 @@
 		C5EFF238260C98D500B22E8C /* ChatListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EFF236260C98D400B22E8C /* ChatListViewCell.swift */; };
 		C5EFF239260C98D500B22E8C /* ChatListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5EFF237260C98D400B22E8C /* ChatListViewCell.xib */; };
 		C5EFF23D260C995B00B22E8C /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EFF23C260C995B00B22E8C /* Chat.swift */; };
+		C5F5A04226296773008F14A5 /* ChangePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5A04126296773008F14A5 /* ChangePasswordVC.swift */; };
 		C5F79FA726160C7200876C7B /* ServiceRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F79FA526160C7200876C7B /* ServiceRateCell.swift */; };
 		C5F79FA826160C7200876C7B /* ServiceRateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5F79FA626160C7200876C7B /* ServiceRateCell.xib */; };
 		C5F79FC72616246100876C7B /* AddServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F79FC62616246100876C7B /* AddServiceVC.swift */; };
@@ -165,6 +166,7 @@
 		C5EFF236260C98D400B22E8C /* ChatListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListViewCell.swift; sourceTree = "<group>"; };
 		C5EFF237260C98D400B22E8C /* ChatListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatListViewCell.xib; sourceTree = "<group>"; };
 		C5EFF23C260C995B00B22E8C /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		C5F5A04126296773008F14A5 /* ChangePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordVC.swift; sourceTree = "<group>"; };
 		C5F79FA526160C7200876C7B /* ServiceRateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRateCell.swift; sourceTree = "<group>"; };
 		C5F79FA626160C7200876C7B /* ServiceRateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceRateCell.xib; sourceTree = "<group>"; };
 		C5F79FC62616246100876C7B /* AddServiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServiceVC.swift; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				C52A761C261FC82C00714405 /* SettingVC.swift */,
+				C5F5A04126296773008F14A5 /* ChangePasswordVC.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -659,6 +662,7 @@
 				C5BAE46B25EE92F20064E65A /* SignupPhoneConfirmVC.swift in Sources */,
 				C5BAE44D25EE8F8B0064E65A /* LoginPhoneVC.swift in Sources */,
 				C5EFF23D260C995B00B22E8C /* Chat.swift in Sources */,
+				C5F5A04226296773008F14A5 /* ChangePasswordVC.swift in Sources */,
 				C5EFF1F1260C085A00B22E8C /* LeftViewCell.swift in Sources */,
 				C504516525F7C39B00FACD2E /* ServicerListCell.swift in Sources */,
 				C527607F25FE65A4002F3989 /* HistoryVC.swift in Sources */,

@@ -456,6 +456,9 @@
                                         <state key="normal">
                                             <imageReference key="image" image="option" catalog="system" symbolScale="large"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onSettingBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mug-nH-zbP"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="MajorColor"/>
@@ -937,7 +940,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZk-IE-bR5">
                                                                 <rect key="frame" x="0.0" y="45" width="194" height="30"/>
                                                                 <subviews>
-                                                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bLX-c0-hPP" customClass="CosmosView" customModule="Cosmos">
+                                                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bLX-c0-hPP" customClass="CosmosView" customModule="Cosmos">
                                                                         <rect key="frame" x="10" y="0.0" width="44" height="30"/>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <constraints>
@@ -3159,6 +3162,9 @@
                                         <state key="normal">
                                             <imageReference key="image" image="option" catalog="system" symbolScale="large"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onSettingBtn:" destination="q29-zb-0jv" eventType="touchUpInside" id="Tux-Ma-PVE"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="MajorColor"/>
@@ -3377,6 +3383,9 @@
                                         <state key="normal">
                                             <imageReference key="image" image="option" catalog="system" symbolScale="large"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onSettingBtn:" destination="mMN-aC-ZNA" eventType="touchUpInside" id="k1p-BY-tr9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="MajorColor"/>
@@ -3514,6 +3523,9 @@
                                         <state key="normal">
                                             <imageReference key="image" image="option" catalog="system" symbolScale="large"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onSettingBtn:" destination="s93-lt-fvV" eventType="touchUpInside" id="qMD-GO-H7p"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="MajorColor"/>
@@ -3623,6 +3635,9 @@
                                         <state key="normal">
                                             <imageReference key="image" image="clock" catalog="system" symbolScale="large"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onHistoryBtn:" destination="3A5-ae-zl6" eventType="touchUpInside" id="Icu-El-d97"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzr-Bx-bkK">
                                         <rect key="frame" x="104" y="10" width="40" height="40"/>
@@ -3632,6 +3647,9 @@
                                         </constraints>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="groupWhite"/>
+                                        <connections>
+                                            <action selector="onFavoriteBtn:" destination="3A5-ae-zl6" eventType="touchUpInside" id="Thz-JV-lcY"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEJ-cf-L1p">
                                         <rect key="frame" x="187" y="10" width="40" height="40"/>
@@ -3641,6 +3659,9 @@
                                         </constraints>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="homeWhite"/>
+                                        <connections>
+                                            <action selector="onHomeBtn:" destination="3A5-ae-zl6" eventType="touchUpInside" id="k3X-0C-ehJ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jB-Gf-znj">
                                         <rect key="frame" x="270" y="10" width="40" height="40"/>
@@ -3650,6 +3671,9 @@
                                         </constraints>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="messageWhite"/>
+                                        <connections>
+                                            <action selector="onChatBtn:" destination="3A5-ae-zl6" eventType="touchUpInside" id="fc3-zn-QdR"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AkQ-Sx-8Qo">
                                         <rect key="frame" x="347.5" y="5" width="50" height="50"/>
@@ -3682,7 +3706,71 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xu6-Bu-zHS">
                                 <rect key="frame" x="0.0" y="94" width="414" height="708"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HN7-U6-geV">
+                                        <rect key="frame" x="41.5" y="329" width="331" height="50"/>
+                                        <color key="backgroundColor" name="MajorColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="pVe-tR-JNL"/>
+                                        </constraints>
+                                        <state key="normal" title="Change password">
+                                            <color key="titleColor" name="textWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onChangePasswordBtn:" destination="3A5-ae-zl6" eventType="touchUpInside" id="JXj-xf-qsP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySX-WC-EXz">
+                                        <rect key="frame" x="41.5" y="269" width="331" height="50"/>
+                                        <color key="backgroundColor" name="MajorColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="nUQ-P3-Mpc"/>
+                                        </constraints>
+                                        <state key="normal" title="Servicer Mode">
+                                            <color key="titleColor" name="textWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3S-vQ-yJO">
+                                        <rect key="frame" x="41.5" y="389" width="331" height="50"/>
+                                        <color key="backgroundColor" name="MajorColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="s7R-4l-pxB"/>
+                                        </constraints>
+                                        <state key="normal" title="Request Withdraw money">
+                                            <color key="titleColor" name="textWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Q3S-vQ-yJO" firstAttribute="width" secondItem="xu6-Bu-zHS" secondAttribute="width" multiplier="0.799517" id="7Vb-oq-sEt"/>
+                                    <constraint firstItem="ySX-WC-EXz" firstAttribute="centerX" secondItem="xu6-Bu-zHS" secondAttribute="centerX" id="BHQ-a9-Yih"/>
+                                    <constraint firstItem="HN7-U6-geV" firstAttribute="centerX" secondItem="xu6-Bu-zHS" secondAttribute="centerX" id="BZX-YY-kyc"/>
+                                    <constraint firstItem="Q3S-vQ-yJO" firstAttribute="centerX" secondItem="xu6-Bu-zHS" secondAttribute="centerX" id="KNn-ts-ihE"/>
+                                    <constraint firstItem="HN7-U6-geV" firstAttribute="width" secondItem="xu6-Bu-zHS" secondAttribute="width" multiplier="0.8" id="KtE-It-iwJ"/>
+                                    <constraint firstItem="HN7-U6-geV" firstAttribute="centerY" secondItem="xu6-Bu-zHS" secondAttribute="centerY" id="X8Q-cM-2VV"/>
+                                    <constraint firstItem="ySX-WC-EXz" firstAttribute="width" secondItem="xu6-Bu-zHS" secondAttribute="width" multiplier="0.799517" id="hgi-Fe-WWr"/>
+                                    <constraint firstItem="Q3S-vQ-yJO" firstAttribute="top" secondItem="HN7-U6-geV" secondAttribute="bottom" constant="10" id="jxC-6M-RGd"/>
+                                    <constraint firstItem="HN7-U6-geV" firstAttribute="top" secondItem="ySX-WC-EXz" secondAttribute="bottom" constant="10" id="o6t-ux-K3U"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ao5-Sf-PJq"/>
@@ -3706,6 +3794,124 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ofR-SJ-HQs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-479" y="2935"/>
+        </scene>
+        <!--Change PasswordVC-->
+        <scene sceneID="1MS-XI-FeG">
+            <objects>
+                <viewController storyboardIdentifier="changepasswordVC" id="Z65-64-pFj" customClass="ChangePasswordVC" customModule="DreamApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1fO-tg-Lf4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6h8-UZ-ZrA">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y5G-RT-1gZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o67-oU-urq">
+                                                <rect key="frame" x="10" y="10" width="157.5" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="o5G-rg-W5m"/>
+                                                </constraints>
+                                                <color key="tintColor" name="textWhite"/>
+                                                <state key="normal" title="Change Password" image="chevron.left" catalog="system">
+                                                    <color key="titleColor" name="textWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onBackBtn:" destination="Z65-64-pFj" eventType="touchUpInside" id="Mab-TR-rtv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="HKc-Zl-H0e"/>
+                                            <constraint firstItem="o67-oU-urq" firstAttribute="centerY" secondItem="y5G-RT-1gZ" secondAttribute="centerY" id="cJD-9z-K6O"/>
+                                            <constraint firstItem="o67-oU-urq" firstAttribute="leading" secondItem="y5G-RT-1gZ" secondAttribute="leading" constant="10" id="zR0-yg-KPk"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="epD-iT-S9s">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="768"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5RG-hZ-uta">
+                                                <rect key="frame" x="41.5" y="30" width="331" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="97N-Wn-QSk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dLr-kh-Gh3">
+                                                <rect key="frame" x="41.5" y="80" width="331" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="U2p-rP-4hy"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zW-Lq-zIo">
+                                                <rect key="frame" x="41.5" y="140" width="331" height="40"/>
+                                                <color key="backgroundColor" name="MajorColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="BvW-1Z-0Te"/>
+                                                </constraints>
+                                                <state key="normal" title="Update password">
+                                                    <color key="titleColor" name="textWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onUpdatePasswordBtn:" destination="Z65-64-pFj" eventType="touchUpInside" id="Ad3-Dd-c3B"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="dLr-kh-Gh3" firstAttribute="width" secondItem="epD-iT-S9s" secondAttribute="width" multiplier="0.799517" id="9I4-1y-Ids"/>
+                                            <constraint firstItem="dLr-kh-Gh3" firstAttribute="centerX" secondItem="epD-iT-S9s" secondAttribute="centerX" id="HBu-09-VoV"/>
+                                            <constraint firstItem="6zW-Lq-zIo" firstAttribute="top" secondItem="dLr-kh-Gh3" secondAttribute="bottom" constant="20" id="J55-PU-xct"/>
+                                            <constraint firstItem="5RG-hZ-uta" firstAttribute="centerX" secondItem="epD-iT-S9s" secondAttribute="centerX" id="JIj-aG-qie"/>
+                                            <constraint firstItem="6zW-Lq-zIo" firstAttribute="width" secondItem="epD-iT-S9s" secondAttribute="width" multiplier="0.799517" id="Ksr-UP-kT6"/>
+                                            <constraint firstItem="dLr-kh-Gh3" firstAttribute="top" secondItem="5RG-hZ-uta" secondAttribute="bottom" constant="10" id="MUZ-9m-o1o"/>
+                                            <constraint firstItem="5RG-hZ-uta" firstAttribute="top" secondItem="epD-iT-S9s" secondAttribute="top" constant="30" id="jDW-AT-gcB"/>
+                                            <constraint firstItem="5RG-hZ-uta" firstAttribute="width" secondItem="epD-iT-S9s" secondAttribute="width" multiplier="0.8" id="lnZ-EA-SVH"/>
+                                            <constraint firstItem="6zW-Lq-zIo" firstAttribute="centerX" secondItem="epD-iT-S9s" secondAttribute="centerX" id="r0V-aC-VQv"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="y5G-RT-1gZ" firstAttribute="centerX" secondItem="6h8-UZ-ZrA" secondAttribute="centerX" id="98d-IP-80O"/>
+                                    <constraint firstItem="y5G-RT-1gZ" firstAttribute="top" secondItem="6h8-UZ-ZrA" secondAttribute="top" id="AbD-Z4-5rL"/>
+                                    <constraint firstItem="y5G-RT-1gZ" firstAttribute="width" secondItem="6h8-UZ-ZrA" secondAttribute="width" id="FDE-dV-rbe"/>
+                                    <constraint firstItem="epD-iT-S9s" firstAttribute="centerX" secondItem="6h8-UZ-ZrA" secondAttribute="centerX" id="KnC-4z-YlT"/>
+                                    <constraint firstItem="epD-iT-S9s" firstAttribute="top" secondItem="y5G-RT-1gZ" secondAttribute="bottom" id="WUL-4E-KQN"/>
+                                    <constraint firstAttribute="bottom" secondItem="epD-iT-S9s" secondAttribute="bottom" id="ji8-KT-Rrz"/>
+                                    <constraint firstItem="epD-iT-S9s" firstAttribute="width" secondItem="6h8-UZ-ZrA" secondAttribute="width" id="qpb-Of-OTR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="46D-9A-8Om"/>
+                        <color key="backgroundColor" name="MajorColor"/>
+                        <constraints>
+                            <constraint firstItem="6h8-UZ-ZrA" firstAttribute="height" secondItem="46D-9A-8Om" secondAttribute="height" id="INs-RA-qAh"/>
+                            <constraint firstItem="6h8-UZ-ZrA" firstAttribute="width" secondItem="46D-9A-8Om" secondAttribute="width" id="MKq-42-zyU"/>
+                            <constraint firstItem="6h8-UZ-ZrA" firstAttribute="centerX" secondItem="46D-9A-8Om" secondAttribute="centerX" id="PXS-ki-prD"/>
+                            <constraint firstItem="6h8-UZ-ZrA" firstAttribute="centerY" secondItem="46D-9A-8Om" secondAttribute="centerY" id="fTG-zf-3aa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cPasswordTxt" destination="dLr-kh-Gh3" id="75L-54-vTj"/>
+                        <outlet property="newPasswordTxt" destination="5RG-hZ-uta" id="9Pa-iA-p54"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KRp-7a-JEt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="538" y="2934"/>
         </scene>
         <!--Chat DetailVC-->
         <scene sceneID="4Bu-9x-DrL">
@@ -3857,6 +4063,11 @@
             <point key="canvasLocation" x="539" y="2283"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="bLX-c0-hPP">
+            <size key="intrinsicContentSize" width="44.0380859375" height="30"/>
+        </designable>
+    </designables>
     <resources>
         <image name="App_icon" width="567" height="567"/>
         <image name="arrow.backward" catalog="system" width="128" height="98"/>

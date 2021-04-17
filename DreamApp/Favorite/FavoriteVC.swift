@@ -26,6 +26,7 @@ class FavoriteVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var homeVC : HomeVC!
     var historyVC : HistoryVC!
     var chatVC : ChatVC!
+    var settingVC : SettingVC!
     override func viewDidLoad() {
         super.viewDidLoad()
         favoriteTable.delegate = self
@@ -132,5 +133,11 @@ class FavoriteVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.chatVC = self.storyboard?.instantiateViewController(withIdentifier: "chatVC") as? ChatVC
         self.chatVC.modalPresentationStyle = .fullScreen
         self.present(self.chatVC, animated: true, completion: nil)
+    }
+    
+    @IBAction func onSettingBtn(_ sender: Any) {
+        self.settingVC = self.storyboard?.instantiateViewController(withIdentifier: "settingVC") as? SettingVC
+        self.settingVC.modalPresentationStyle = .fullScreen
+        self.present(self.settingVC, animated: true, completion: nil)
     }
 }

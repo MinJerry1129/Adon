@@ -21,6 +21,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var homeVC : HomeVC!
     var historyVC : HistoryVC!
     var favoriteVC : FavoriteVC!
+    var settingVC : SettingVC!
     
     var allChatList = [Chat]()
     var user_uid : String!
@@ -119,5 +120,11 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.homeVC = self.storyboard?.instantiateViewController(withIdentifier: "homeVC") as? HomeVC
         self.homeVC.modalPresentationStyle = .fullScreen
         self.present(self.homeVC, animated: true, completion: nil)
+    }
+    
+    @IBAction func onSettingBtn(_ sender: Any) {
+        self.settingVC = self.storyboard?.instantiateViewController(withIdentifier: "settingVC") as? SettingVC
+        self.settingVC.modalPresentationStyle = .fullScreen
+        self.present(self.settingVC, animated: true, completion: nil)
     }
 }

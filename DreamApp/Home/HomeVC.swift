@@ -22,6 +22,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     var historyVC : HistoryVC!
     var favoriteVC : FavoriteVC!
     var chatVC : ChatVC!
+    var settingVC : SettingVC!
     var loginhomeVC : LoginHomeVC!
     
     
@@ -162,6 +163,16 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             self.chatVC = self.storyboard?.instantiateViewController(withIdentifier: "chatVC") as? ChatVC
             self.chatVC.modalPresentationStyle = .fullScreen
             self.present(self.chatVC, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func onSettingBtn(_ sender: Any) {
+        if loginStatus == "no"{
+            onGoLoginVC()
+        }else{
+            self.settingVC = self.storyboard?.instantiateViewController(withIdentifier: "settingVC") as? SettingVC
+            self.settingVC.modalPresentationStyle = .fullScreen
+            self.present(self.settingVC, animated: true, completion: nil)
         }
     }
     
