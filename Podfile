@@ -21,4 +21,5 @@ target 'DreamApp' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   
+  pod 'BraintreeDropIn'
 end

@@ -14,10 +14,16 @@ class SettingVC: UIViewController {
     var chatVC : ChatVC!
     var changepasswordVC : ChangePasswordVC!
 
+    @IBOutlet weak var footerView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        footerView.roundCorners(corners: [.topLeft, .topRight], radius: 20)
     }
     
     @IBAction func onChangePasswordBtn(_ sender: Any) {

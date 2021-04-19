@@ -62,6 +62,10 @@
 		C5EFF239260C98D500B22E8C /* ChatListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5EFF237260C98D400B22E8C /* ChatListViewCell.xib */; };
 		C5EFF23D260C995B00B22E8C /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EFF23C260C995B00B22E8C /* Chat.swift */; };
 		C5F5A04226296773008F14A5 /* ChangePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5A04126296773008F14A5 /* ChangePasswordVC.swift */; };
+		C5F5A047262B185B008F14A5 /* SChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5A046262B185B008F14A5 /* SChatVC.swift */; };
+		C5F5A04B262B18BC008F14A5 /* SChatDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5A04A262B18BC008F14A5 /* SChatDetailVC.swift */; };
+		C5F5A04F262B18E8008F14A5 /* SHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5A04E262B18E8008F14A5 /* SHistoryVC.swift */; };
+		C5F5A054262B1933008F14A5 /* SSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5A053262B1933008F14A5 /* SSettingVC.swift */; };
 		C5F79FA726160C7200876C7B /* ServiceRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F79FA526160C7200876C7B /* ServiceRateCell.swift */; };
 		C5F79FA826160C7200876C7B /* ServiceRateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5F79FA626160C7200876C7B /* ServiceRateCell.xib */; };
 		C5F79FC72616246100876C7B /* AddServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F79FC62616246100876C7B /* AddServiceVC.swift */; };
@@ -167,6 +171,10 @@
 		C5EFF237260C98D400B22E8C /* ChatListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatListViewCell.xib; sourceTree = "<group>"; };
 		C5EFF23C260C995B00B22E8C /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		C5F5A04126296773008F14A5 /* ChangePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordVC.swift; sourceTree = "<group>"; };
+		C5F5A046262B185B008F14A5 /* SChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SChatVC.swift; sourceTree = "<group>"; };
+		C5F5A04A262B18BC008F14A5 /* SChatDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SChatDetailVC.swift; sourceTree = "<group>"; };
+		C5F5A04E262B18E8008F14A5 /* SHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHistoryVC.swift; sourceTree = "<group>"; };
+		C5F5A053262B1933008F14A5 /* SSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSettingVC.swift; sourceTree = "<group>"; };
 		C5F79FA526160C7200876C7B /* ServiceRateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRateCell.swift; sourceTree = "<group>"; };
 		C5F79FA626160C7200876C7B /* ServiceRateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceRateCell.xib; sourceTree = "<group>"; };
 		C5F79FC62616246100876C7B /* AddServiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServiceVC.swift; sourceTree = "<group>"; };
@@ -376,6 +384,7 @@
 			children = (
 				C5E0DA2325A8AF79008B0BFC /* AppDelegate.swift */,
 				C5E0DA2525A8AF79008B0BFC /* SceneDelegate.swift */,
+				C5F5A044262B1831008F14A5 /* Servicer */,
 				C52A761B261FC81300714405 /* Setting */,
 				C51B3BBA2612AA9B001C2A09 /* GoogleService-Info.plist */,
 				C5F79FC52616244300876C7B /* Person */,
@@ -406,6 +415,41 @@
 				C5EFF1EE260C085A00B22E8C /* RightViewCell.xib */,
 			);
 			path = chatdetail;
+			sourceTree = "<group>";
+		};
+		C5F5A044262B1831008F14A5 /* Servicer */ = {
+			isa = PBXGroup;
+			children = (
+				C5F5A052262B1924008F14A5 /* Setting */,
+				C5F5A04D262B18C8008F14A5 /* History */,
+				C5F5A045262B1837008F14A5 /* Chat */,
+			);
+			path = Servicer;
+			sourceTree = "<group>";
+		};
+		C5F5A045262B1837008F14A5 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				C5F5A046262B185B008F14A5 /* SChatVC.swift */,
+				C5F5A04A262B18BC008F14A5 /* SChatDetailVC.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		C5F5A04D262B18C8008F14A5 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				C5F5A04E262B18E8008F14A5 /* SHistoryVC.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		C5F5A052262B1924008F14A5 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				C5F5A053262B1933008F14A5 /* SSettingVC.swift */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		C5F79FC52616244300876C7B /* Person */ = {
@@ -654,6 +698,7 @@
 				C527608C25FE7B22002F3989 /* FavoriteVC.swift in Sources */,
 				C5EFF210260C09A900B22E8C /* Message.swift in Sources */,
 				C5F79FEC2616AE6200876C7B /* ServicersList.swift in Sources */,
+				C5F5A04F262B18E8008F14A5 /* SHistoryVC.swift in Sources */,
 				C5BAE46225EE92BF0064E65A /* SignupEmailVC.swift in Sources */,
 				C5EFF1F6260C08E800B22E8C /* Extension.swift in Sources */,
 				C5F79FA726160C7200876C7B /* ServiceRateCell.swift in Sources */,
@@ -661,6 +706,7 @@
 				C527608325FE69EE002F3989 /* HistoryGoListCell.swift in Sources */,
 				C5BAE46B25EE92F20064E65A /* SignupPhoneConfirmVC.swift in Sources */,
 				C5BAE44D25EE8F8B0064E65A /* LoginPhoneVC.swift in Sources */,
+				C5F5A047262B185B008F14A5 /* SChatVC.swift in Sources */,
 				C5EFF23D260C995B00B22E8C /* Chat.swift in Sources */,
 				C5F5A04226296773008F14A5 /* ChangePasswordVC.swift in Sources */,
 				C5EFF1F1260C085A00B22E8C /* LeftViewCell.swift in Sources */,
@@ -670,6 +716,7 @@
 				C5E0DA2625A8AF79008B0BFC /* SceneDelegate.swift in Sources */,
 				C5EFF234260C91A700B22E8C /* ChatDetailVC.swift in Sources */,
 				C52A7619261F866100714405 /* UpdateInfoVC.swift in Sources */,
+				C5F5A054262B1933008F14A5 /* SSettingVC.swift in Sources */,
 				C54F44772617FBB7007936AD /* FavoriteListCell.swift in Sources */,
 				C5BAE45F25EE92AF0064E65A /* SignupHomeVC.swift in Sources */,
 				C501C06F2604EDCF00BE7297 /* Global.swift in Sources */,
@@ -681,6 +728,7 @@
 				C5BAE46525EE92CF0064E65A /* SignupPhoneVC.swift in Sources */,
 				C5BAE44A25EE8F4F0064E65A /* LoginHomeVC.swift in Sources */,
 				C504517725F7D84C00FACD2E /* ServicerMapVC.swift in Sources */,
+				C5F5A04B262B18BC008F14A5 /* SChatDetailVC.swift in Sources */,
 				C5EFF238260C98D500B22E8C /* ChatListViewCell.swift in Sources */,
 				C5BAE45025EE8F9B0064E65A /* LoginEmailVC.swift in Sources */,
 				C527607A25FE59C3002F3989 /* ReviewListCell.swift in Sources */,

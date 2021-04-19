@@ -1,5 +1,7 @@
 ${PODS_ROOT}/Target Support Files/Pods-DreamApp/Pods-DreamApp-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/Braintree/Braintree.framework
+${BUILT_PRODUCTS_DIR}/BraintreeDropIn/BraintreeDropIn.framework
 ${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework
 ${BUILT_PRODUCTS_DIR}/FirebaseAuth/FirebaseAuth.framework
 ${BUILT_PRODUCTS_DIR}/FirebaseCore/FirebaseCore.framework
@@ -17,3 +19,5 @@ ${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework
 ${BUILT_PRODUCTS_DIR}/iOSDropDown/iOSDropDown.framework
 ${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework
 ${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/PPRiskMagnes/PPRiskMagnes.framework/PPRiskMagnes
+${PODS_XCFRAMEWORKS_BUILD_DIR}/CardinalMobile/CardinalMobile.framework/CardinalMobile

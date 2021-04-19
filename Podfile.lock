@@ -1,5 +1,35 @@
 PODS:
   - Alamofire (5.4.1)
+  - Braintree/ApplePay (5.3.0):
+    - Braintree/Core
+  - Braintree/Card (5.3.0):
+    - Braintree/Core
+  - Braintree/Core (5.3.0)
+  - Braintree/PaymentFlow (5.3.0):
+    - Braintree/Core
+    - Braintree/PayPalDataCollector
+  - Braintree/PayPal (5.3.0):
+    - Braintree/Core
+    - Braintree/PayPalDataCollector
+  - Braintree/PayPalDataCollector (5.3.0):
+    - Braintree/Core
+  - Braintree/ThreeDSecure (5.3.0):
+    - Braintree/Card
+    - Braintree/PaymentFlow
+  - Braintree/UnionPay (5.3.0):
+    - Braintree/Card
+    - Braintree/Core
+  - Braintree/Venmo (5.3.0):
+    - Braintree/Core
+    - Braintree/PayPalDataCollector
+  - BraintreeDropIn (9.0.0):
+    - Braintree/ApplePay (~> 5.3)
+    - Braintree/Card (~> 5.3)
+    - Braintree/Core (~> 5.3)
+    - Braintree/PayPal (~> 5.3)
+    - Braintree/ThreeDSecure (~> 5.3)
+    - Braintree/UnionPay (~> 5.3)
+    - Braintree/Venmo (~> 5.3)
   - Cosmos (23.0.0)
   - Firebase/AdMob (7.4.0):
     - Firebase/CoreOnly
@@ -104,6 +134,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - BraintreeDropIn
   - Cosmos
   - Firebase/AdMob
   - Firebase/Analytics
@@ -120,6 +151,8 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Braintree
+    - BraintreeDropIn
     - Cosmos
     - Firebase
     - FirebaseAnalytics
@@ -147,6 +180,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  Braintree: 0345adbe9b0401c9a0546787dc4ba450f9e5dd2d
+  BraintreeDropIn: e49dfca410537be84563d1359c8dc2623cc2217d
   Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
   Firebase: 09fb40287b6dfc8ee65f726fa0b788719d3f2a07
   FirebaseAnalytics: adb3c8f02f83d00661cdaac6dbb4d54e9720d1b6
@@ -172,6 +207,6 @@ SPEC CHECKSUMS:
   SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: e91893505feccd5dd5510e539ad8f23ad072f2da
+PODFILE CHECKSUM: c4e2135f820fd75d16c3043be4e1afc1f8039636
 
 COCOAPODS: 1.10.1
