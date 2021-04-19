@@ -8,6 +8,7 @@
 import UIKit
 
 class SettingVC: UIViewController {
+    var schatVC : SChatVC!
     var homeVC : HomeVC!
     var historyVC : HistoryVC!
     var favoriteVC : FavoriteVC!
@@ -32,6 +33,12 @@ class SettingVC: UIViewController {
         self.present(self.changepasswordVC, animated: true, completion: nil)
     }
     
+    @IBAction func onServicerModeBtn(_ sender: Any) {
+        self.schatVC = self.storyboard?.instantiateViewController(withIdentifier: "schatVC") as? SChatVC
+        self.schatVC.modalPresentationStyle = .fullScreen
+        self.present(self.schatVC, animated: true, completion: nil)
+        
+    }
     
     @IBAction func onHistoryBtn(_ sender: Any) {
         self.historyVC = self.storyboard?.instantiateViewController(withIdentifier: "historyVC") as? HistoryVC

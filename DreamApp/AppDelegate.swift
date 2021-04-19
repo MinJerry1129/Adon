@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var userID : String!
     var user_uid : String!    
     var seluser_uid : String!
+    var clientuser_uid : String!
     var chatid : String!
     var chat_uid : String!
 

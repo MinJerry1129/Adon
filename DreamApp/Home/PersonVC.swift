@@ -14,6 +14,7 @@ import Toast_Swift
 class PersonVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var addserviceVC : AddServiceVC!
     var updateinfoVC : UpdateInfoVC!
+    var homeVC : HomeVC!
     
     @IBOutlet weak var ServiceRateTB: UITableView!
     
@@ -164,7 +165,9 @@ class PersonVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         try! Auth.auth().signOut()
         AppDelegate.shared().loginStatus = "no"
         UserDefaults.standard.set("no", forKey: "loginstatus")
-        self.dismiss(animated: true, completion: nil)
+        self.homeVC = self.storyboard?.instantiateViewController(withIdentifier: "homeVC") as? HomeVC
+        self.homeVC.modalPresentationStyle = .fullScreen
+        self.present(self.homeVC, animated: true, completion: nil)
     }
     
     @IBAction func onAddService(_ sender: Any) {

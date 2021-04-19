@@ -50,9 +50,6 @@ class HistoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         getData()
     }
     func getData(){
-        allReviews = []
-        completeReviews = []
-        ongoingReviews = []
         //
         self.view.addSubview(spinnerView)
         spinnerView.frame = CGRect(x: (UIScreen.main.bounds.size.width - 50.0) / 2.0, y: (UIScreen.main.bounds.size.height-50)/2, width: 50, height: 50)
@@ -61,10 +58,14 @@ class HistoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         spinnerView.beginRefreshing()
         
         let parameters: Parameters = ["cuid" : user_uid]
-        AF.request(Global.baseUrl + "api/getReviewInfo", method: .post, parameters: parameters, encoding:JSONEncoding.default).responseJSON{ response in
+        AF.request(Global.baseUrl + "api/getClientReviewInfo", method: .post, parameters: parameters, encoding:JSONEncoding.default).responseJSON{ response in
             print(response)
             self.spinnerView.endRefreshing()
             if let value = response.value as? [String: AnyObject] {
+                self.allReviews = []
+                self.completeReviews = []
+                self.ongoingReviews = []
+                
                 self.historyTB.isUserInteractionEnabled = true
                 let reviewInfo = value["reviewInfo"] as? [[String: AnyObject]]
                 

@@ -940,7 +940,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZk-IE-bR5">
                                                                 <rect key="frame" x="0.0" y="45" width="194" height="30"/>
                                                                 <subviews>
-                                                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bLX-c0-hPP" customClass="CosmosView" customModule="Cosmos">
+                                                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bLX-c0-hPP" customClass="CosmosView" customModule="Cosmos">
                                                                         <rect key="frame" x="10" y="0.0" width="44" height="30"/>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <constraints>
@@ -3741,6 +3741,9 @@
                                                 <integer key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onServicerModeBtn:" destination="3A5-ae-zl6" eventType="touchUpInside" id="Igo-g4-r3g"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3S-vQ-yJO">
                                         <rect key="frame" x="41.5" y="389" width="331" height="50"/>
@@ -3826,6 +3829,9 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kri-FH-wAL">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                        <connections>
+                                                            <action selector="onAvatarBtn:" destination="KfK-Pi-QgM" eventType="touchUpInside" id="Nbv-8q-ugs"/>
+                                                        </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GI1-gX-4mB">
                                                         <rect key="frame" x="5" y="5" width="40" height="40"/>
@@ -3885,6 +3891,9 @@
                                                 <state key="normal">
                                                     <imageReference key="image" image="clock" catalog="system" symbolScale="large"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onHistoryBtn:" destination="KfK-Pi-QgM" eventType="touchUpInside" id="TSd-dZ-wEG"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rej-mu-71F">
                                                 <rect key="frame" x="182" y="5" width="50" height="50"/>
@@ -3905,6 +3914,9 @@
                                                 <state key="normal">
                                                     <imageReference key="image" image="option" catalog="system" symbolScale="large"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onSettingBtn:" destination="KfK-Pi-QgM" eventType="touchUpInside" id="xk3-45-wKN"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" name="MajorColor"/>
@@ -3924,7 +3936,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yqe-kb-O2r">
                                         <rect key="frame" x="0.0" y="50" width="414" height="708"/>
                                         <subviews>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UYw-Mw-KD2">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UYw-Mw-KD2">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="708"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </tableView>
@@ -3963,7 +3975,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="chatListTB" destination="UYw-Mw-KD2" id="ehB-ki-Yhh"/>
                         <outlet property="footerView" destination="VYa-DK-cmw" id="4qm-sy-tPs"/>
+                        <outlet property="imgAvatar" destination="GI1-gX-4mB" id="rfW-sy-r17"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hYU-yG-GZ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -4301,6 +4315,9 @@
                                                                     <constraint firstAttribute="height" constant="30" id="fq3-V2-e4j"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Send"/>
+                                                                <connections>
+                                                                    <action selector="onSentMsg:" destination="6na-jD-AQi" eventType="touchUpInside" id="sFk-Dw-Yvx"/>
+                                                                </connections>
                                                             </button>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X6R-gM-xcP">
                                                                 <rect key="frame" x="20" y="15" width="324" height="40"/>
@@ -4371,6 +4388,10 @@
                             <constraint firstItem="mS3-c6-w2u" firstAttribute="centerY" secondItem="h0T-Ch-ju9" secondAttribute="centerY" id="dmJ-Mv-fhm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chatTB" destination="586-G9-Joi" id="rnR-Ct-ErZ"/>
+                        <outlet property="txtMessage" destination="X6R-gM-xcP" id="2mY-GH-ncc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xY7-FF-QGZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4406,6 +4427,9 @@
                                         </constraints>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="messageWhite"/>
+                                        <connections>
+                                            <action selector="onChatBtn:" destination="YiO-wR-THM" eventType="touchUpInside" id="Jgw-yY-rSu"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPy-OG-ZVI">
                                         <rect key="frame" x="301" y="10" width="40" height="40"/>
@@ -4417,6 +4441,9 @@
                                         <state key="normal">
                                             <imageReference key="image" image="option" catalog="system" symbolScale="large"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onSettingBtn:" destination="YiO-wR-THM" eventType="touchUpInside" id="eUR-B4-a5K"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="MajorColor"/>
@@ -4473,6 +4500,9 @@
                                                 <integer key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onBtnAll:" destination="YiO-wR-THM" eventType="touchUpInside" id="TTC-Zq-c9X"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLQ-SH-PFW">
                                         <rect key="frame" x="145" y="5" width="124.5" height="40"/>
@@ -4489,6 +4519,9 @@
                                                 <integer key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onBtnOngoing:" destination="YiO-wR-THM" eventType="touchUpInside" id="zB0-x8-bAc"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eS9-w4-bck">
                                         <rect key="frame" x="279.5" y="5" width="124.5" height="40"/>
@@ -4505,6 +4538,9 @@
                                                 <integer key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onBtnComplete:" destination="YiO-wR-THM" eventType="touchUpInside" id="QYm-19-oIb"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -4543,7 +4579,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="allBtn" destination="aGY-Yk-ULm" id="8lN-I5-jr2"/>
+                        <outlet property="completeBtn" destination="eS9-w4-bck" id="BMx-Df-TUY"/>
                         <outlet property="footerView" destination="MYe-84-fCh" id="qNO-zP-n6W"/>
+                        <outlet property="goonBtn" destination="VLQ-SH-PFW" id="5P6-DZ-t5R"/>
+                        <outlet property="historyTB" destination="Txf-qT-hkG" id="OAf-yB-zsQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZZE-xp-RAq" sceneMemberID="firstResponder"/>
@@ -4590,6 +4630,9 @@
                                         <state key="normal">
                                             <imageReference key="image" image="clock" catalog="system" symbolScale="large"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onHistoryBtn:" destination="EF6-Oj-4m2" eventType="touchUpInside" id="p0h-kb-Lfz"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Z2-rh-A5i">
                                         <rect key="frame" x="187" y="10" width="40" height="40"/>
@@ -4599,6 +4642,9 @@
                                         </constraints>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="messageWhite"/>
+                                        <connections>
+                                            <action selector="onChatBtn:" destination="EF6-Oj-4m2" eventType="touchUpInside" id="sfe-8A-vAw"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIX-9K-D4O">
                                         <rect key="frame" x="296" y="5" width="50" height="50"/>
@@ -4643,6 +4689,9 @@
                                                 <integer key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onChangePasswordBtn:" destination="EF6-Oj-4m2" eventType="touchUpInside" id="1t8-eH-e5a"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRC-td-rPe">
                                         <rect key="frame" x="41.5" y="269" width="331" height="50"/>
@@ -4650,7 +4699,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="KmW-u5-eN0"/>
                                         </constraints>
-                                        <state key="normal" title="Servicer Mode">
+                                        <state key="normal" title="Client Mode">
                                             <color key="titleColor" name="textWhite"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -4659,6 +4708,9 @@
                                                 <integer key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onClientModeBtn:" destination="EF6-Oj-4m2" eventType="touchUpInside" id="jrD-bA-6Do"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97i-uj-7wP">
                                         <rect key="frame" x="41.5" y="389" width="331" height="50"/>
@@ -4709,7 +4761,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="footerView" destination="oVb-4l-t8t" id="Rnl-jz-2bk"/>
+                        <outlet property="footerView" destination="oVb-4l-t8t" id="Epz-4p-KH5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="arw-pt-h2J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -4717,11 +4769,6 @@
             <point key="canvasLocation" x="-2986" y="5650"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="bLX-c0-hPP">
-            <size key="intrinsicContentSize" width="44.0380859375" height="30"/>
-        </designable>
-    </designables>
     <resources>
         <image name="App_icon" width="567" height="567"/>
         <image name="arrow.backward" catalog="system" width="128" height="98"/>

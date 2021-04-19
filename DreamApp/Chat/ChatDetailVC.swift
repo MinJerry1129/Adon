@@ -107,7 +107,7 @@ class ChatDetailVC: UIViewController {
             let time_interval = getCurrentTimeStamp()
             database.child("chat").child(user_uid).child(chat_uid).child(s_uid).child("\(time_interval)").updateChildValues(["message" : txtMessage.text!, "status" : "send" , "date" : time_interval])
             
-            database.child("chat").child(s_uid).child(chat_uid).child(user_uid).child("\(time_interval)").updateChildValues(["message" : txtMessage.text!, "status" : "send" , "date" : time_interval])
+            database.child("chat").child(s_uid).child(chat_uid).child(user_uid).child("\(time_interval)").updateChildValues(["message" : txtMessage.text!, "status" : "receive" , "date" : time_interval])
             
             database.child("chat").child(s_uid).child(chat_uid).updateChildValues(["status" : "yes"])
             self.chatTB.reloadData()
