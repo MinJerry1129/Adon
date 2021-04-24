@@ -18,6 +18,11 @@
 		C504516625F7C39B00FACD2E /* ServicerListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C504516425F7C39B00FACD2E /* ServicerListCell.xib */; };
 		C504517425F7D24200FACD2E /* ServicerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C504517325F7D24200FACD2E /* ServicerListVC.swift */; };
 		C504517725F7D84C00FACD2E /* ServicerMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C504517625F7D84C00FACD2E /* ServicerMapVC.swift */; };
+		C510094F2633B725004369C7 /* JobListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C510094D2633B725004369C7 /* JobListCell.swift */; };
+		C51009502633B726004369C7 /* JobListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C510094E2633B725004369C7 /* JobListCell.xib */; };
+		C510095726346F9D004369C7 /* ServiceOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C510095626346F9D004369C7 /* ServiceOneVC.swift */; };
+		C510095A26346FB1004369C7 /* SClientOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C510095926346FB1004369C7 /* SClientOneVC.swift */; };
+		C510095D263470D1004369C7 /* TransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C510095C263470D1004369C7 /* TransactionVC.swift */; };
 		C51B3BBB2612AA9B001C2A09 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C51B3BBA2612AA9B001C2A09 /* GoogleService-Info.plist */; };
 		C527607625FE5933002F3989 /* ServicerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C527607525FE5933002F3989 /* ServicerVC.swift */; };
 		C527607A25FE59C3002F3989 /* ReviewListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C527607825FE59C3002F3989 /* ReviewListCell.swift */; };
@@ -125,6 +130,11 @@
 		C504516425F7C39B00FACD2E /* ServicerListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicerListCell.xib; sourceTree = "<group>"; };
 		C504517325F7D24200FACD2E /* ServicerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicerListVC.swift; sourceTree = "<group>"; };
 		C504517625F7D84C00FACD2E /* ServicerMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicerMapVC.swift; sourceTree = "<group>"; };
+		C510094D2633B725004369C7 /* JobListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListCell.swift; sourceTree = "<group>"; };
+		C510094E2633B725004369C7 /* JobListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobListCell.xib; sourceTree = "<group>"; };
+		C510095626346F9D004369C7 /* ServiceOneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceOneVC.swift; sourceTree = "<group>"; };
+		C510095926346FB1004369C7 /* SClientOneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SClientOneVC.swift; sourceTree = "<group>"; };
+		C510095C263470D1004369C7 /* TransactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionVC.swift; sourceTree = "<group>"; };
 		C51B3BBA2612AA9B001C2A09 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C527607525FE5933002F3989 /* ServicerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicerVC.swift; sourceTree = "<group>"; };
 		C527607825FE59C3002F3989 /* ReviewListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListCell.swift; sourceTree = "<group>"; };
@@ -271,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				C527607E25FE65A4002F3989 /* HistoryVC.swift */,
+				C510095626346F9D004369C7 /* ServiceOneVC.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -357,6 +368,8 @@
 				C527607925FE59C3002F3989 /* ReviewListCell.xib */,
 				C527608125FE69EE002F3989 /* HistoryGoListCell.swift */,
 				C527608225FE69EE002F3989 /* HistoryGoListCell.xib */,
+				C510094D2633B725004369C7 /* JobListCell.swift */,
+				C510094E2633B725004369C7 /* JobListCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -440,6 +453,8 @@
 			isa = PBXGroup;
 			children = (
 				C5F5A04E262B18E8008F14A5 /* SHistoryVC.swift */,
+				C510095926346FB1004369C7 /* SClientOneVC.swift */,
+				C510095C263470D1004369C7 /* TransactionVC.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -578,6 +593,7 @@
 				C5F79FA826160C7200876C7B /* ServiceRateCell.xib in Resources */,
 				C54F44782617FBB7007936AD /* FavoriteListCell.xib in Resources */,
 				C5FE39CE260D6CC200E4416F /* MontserratAlternates-Bold.otf in Resources */,
+				C51009502633B726004369C7 /* JobListCell.xib in Resources */,
 				C5FE39D2260D6CC200E4416F /* Montserrat-Medium.otf in Resources */,
 				C5FE39CB260D6CC200E4416F /* MontserratAlternates-MediumItalic.otf in Resources */,
 				C5FE39DF260D6CC200E4416F /* MontserratAlternates-Regular.otf in Resources */,
@@ -707,6 +723,7 @@
 				C5BAE46B25EE92F20064E65A /* SignupPhoneConfirmVC.swift in Sources */,
 				C5BAE44D25EE8F8B0064E65A /* LoginPhoneVC.swift in Sources */,
 				C5F5A047262B185B008F14A5 /* SChatVC.swift in Sources */,
+				C510095A26346FB1004369C7 /* SClientOneVC.swift in Sources */,
 				C5EFF23D260C995B00B22E8C /* Chat.swift in Sources */,
 				C5F5A04226296773008F14A5 /* ChangePasswordVC.swift in Sources */,
 				C5EFF1F1260C085A00B22E8C /* LeftViewCell.swift in Sources */,
@@ -719,6 +736,7 @@
 				C5F5A054262B1933008F14A5 /* SSettingVC.swift in Sources */,
 				C54F44772617FBB7007936AD /* FavoriteListCell.swift in Sources */,
 				C5BAE45F25EE92AF0064E65A /* SignupHomeVC.swift in Sources */,
+				C510095D263470D1004369C7 /* TransactionVC.swift in Sources */,
 				C501C06F2604EDCF00BE7297 /* Global.swift in Sources */,
 				C5BAE46825EE92E20064E65A /* SignupEmailConfirmVC.swift in Sources */,
 				C54A6A9D25AB856E00C34D10 /* PersonVC.swift in Sources */,
@@ -734,8 +752,10 @@
 				C527607A25FE59C3002F3989 /* ReviewListCell.swift in Sources */,
 				C5F79FC72616246100876C7B /* AddServiceVC.swift in Sources */,
 				C501C0682604EC9E00BE7297 /* Category.swift in Sources */,
+				C510094F2633B725004369C7 /* JobListCell.swift in Sources */,
 				C504515B25F7A9A500FACD2E /* JobCategoryCell.swift in Sources */,
 				C527609025FE83ED002F3989 /* ChatVC.swift in Sources */,
+				C510095726346F9D004369C7 /* ServiceOneVC.swift in Sources */,
 				C504517425F7D24200FACD2E /* ServicerListVC.swift in Sources */,
 				C5EFF1F0260C085A00B22E8C /* RightViewCell.swift in Sources */,
 			);

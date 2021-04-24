@@ -11,9 +11,11 @@ import SDWebImage
 import JTMaterialSpinner
 import Toast_Swift
 
-class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class HomeVC: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     @IBOutlet weak var footerView: UIView!
-    @IBOutlet weak var JobListTable: UITableView!
+    @IBOutlet weak var JobListCV: UICollectionView!
+    
+//    @IBOutlet weak var JobListTable: UITableView!
     @IBOutlet weak var avatarView: UIView!
     @IBOutlet weak var imgAvatar: UIImageView!
     
@@ -32,9 +34,9 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     var user_uid : String!
     override func viewDidLoad() {
         super.viewDidLoad()
-        JobListTable.delegate = self
-        JobListTable.dataSource = self
-        JobListTable.register(UINib(nibName: "JobCategoryCell", bundle: nil), forCellReuseIdentifier: "cell")
+        JobListCV.delegate = self
+        JobListCV.dataSource = self
+        JobListCV.register(UINib(nibName: "JobListCell", bundle: nil), forCellWithReuseIdentifier: "cell")
         getData()
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -91,7 +93,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
                         self.allCategory.append(categoryCell)
                     }
                 }
-                self.JobListTable.reloadData()
+                self.JobListCV.reloadData()
             }
         }
     }
@@ -106,29 +108,29 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             self.present(self.personVC, animated: true, completion: nil)
         }
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return allCategory.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let oneCategory: Category
         oneCategory =  allCategory[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! JobCategoryCell
-        cell.mainImg.sd_setImage(with: URL(string: Global.baseUrl + oneCategory.url), completed: nil)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: "cell"), for: indexPath) as! JobListCell
+        cell.imgJob.sd_setImage(with: URL(string: Global.baseUrl + oneCategory.url), completed: nil)
         cell.txtTitle.text = oneCategory.name
         return cell
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         AppDelegate.shared().categoryID = allCategory[indexPath.row].id
-        AppDelegate.shared().categoryName = allCategory[indexPath.row].name        
-        
+        AppDelegate.shared().categoryName = allCategory[indexPath.row].name
+
         self.subcategoryVC = self.storyboard?.instantiateViewController(withIdentifier: "subcategoryVC") as? SubCategoryVC
         self.subcategoryVC.modalPresentationStyle = .fullScreen
         self.present(self.subcategoryVC, animated: true, completion: nil)
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: (collectionView.bounds.width-30) * 0.3, height: (collectionView.bounds.width - 20) * 0.35)
     }
     func onGoLoginVC(){
         self.loginhomeVC = self.storyboard?.instantiateViewController(withIdentifier: "loginhomeVC") as? LoginHomeVC

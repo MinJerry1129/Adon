@@ -10,11 +10,11 @@ import Alamofire
 import SDWebImage
 import Toast_Swift
 import JTMaterialSpinner
-class SubCategoryVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class SubCategoryVC: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var adsView: UIView!
     @IBOutlet weak var txtJobTitle: UILabel!
-    @IBOutlet weak var JobListTable: UITableView!
+    @IBOutlet weak var JobListCV: UICollectionView!
     
     var servicerlistVC : ServicerListVC!
     
@@ -29,9 +29,10 @@ class SubCategoryVC: UIViewController,UITableViewDelegate,UITableViewDataSource 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        JobListTable.delegate = self
-        JobListTable.dataSource = self
-        JobListTable.register(UINib(nibName: "JobCategoryCell", bundle: nil), forCellReuseIdentifier: "cell")
+        JobListCV.delegate = self
+        JobListCV.dataSource = self
+        JobListCV.register(UINib(nibName: "JobListCell", bundle: nil), forCellWithReuseIdentifier: "cell")
+        
         banner.rootViewController = self
         adsView.addSubview(banner)
         setReady()
@@ -72,7 +73,7 @@ class SubCategoryVC: UIViewController,UITableViewDelegate,UITableViewDataSource 
                     }
                 }
                 
-                self.JobListTable.reloadData()
+                self.JobListCV.reloadData()
             }
         }
     }
@@ -80,26 +81,29 @@ class SubCategoryVC: UIViewController,UITableViewDelegate,UITableViewDataSource 
     @IBAction func onBackBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return allServices.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let oneService: Service
         oneService =  allServices[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! JobCategoryCell
-        cell.mainImg.sd_setImage(with: URL(string: Global.baseUrl + oneService.url), completed: nil)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: "cell"), for: indexPath) as! JobListCell
+        cell.imgJob.sd_setImage(with: URL(string: Global.baseUrl + oneService.url), completed: nil)
         cell.txtTitle.text = oneService.name
+        
         return cell
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         AppDelegate.shared().serviceID = allServices[indexPath.row].id
         AppDelegate.shared().serviceName = allServices[indexPath.row].name
         self.servicerlistVC = self.storyboard?.instantiateViewController(withIdentifier: "servicerlistVC") as? ServicerListVC
         self.servicerlistVC.modalPresentationStyle = .fullScreen
         self.present(self.servicerlistVC, animated: true, completion: nil)
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: (collectionView.bounds.width-30) * 0.3, height: (collectionView.bounds.width - 20) * 0.35)
     }
+    
 }
